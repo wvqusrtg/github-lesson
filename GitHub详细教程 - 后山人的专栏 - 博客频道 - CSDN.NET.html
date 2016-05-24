@@ -1,0 +1,2410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0067)http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.1.1 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/fcnm"></script><script type="text/javascript" async="" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/fcnm(1)"></script>   
+   
+
+    <script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/tracking.js" charset="utf-8"></script>  
+
+    <script type="text/javascript">
+        var protocol = window.location.protocol;
+        document.write('<script type="text/javascript" src="' + protocol + '//csdnimg.cn/pubfooter/js/repoAddr2.js?v=' + Math.random() + '"></' + 'script>');
+    </script><script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/repoAddr2.js"></script>
+
+  
+ <meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" media="handheld" href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#">
+
+    <title>GitHub详细教程 - 后山人的专栏
+        - 博客频道 - CSDN.NET</title>
+    
+    <meta name="description" content="转载请标明是引用于 http://blog.csdn.net/chenyujing5678 欢迎拍砖! 一、引言好多人都问，织梦的下拉导航怎么做呢？其实很简单！即使你对代码一点也不熟悉，没关系！按照我的步骤走！记住一步也不能错哦！二、实现过程1、首先：将下面这段代码贴到templets\default\footer.htm文件里（只要在此文件里就行，位置无所谓啦">
+    <script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/jquery.js" type="text/javascript"></script>
+      <script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/jquery-version.js"></script>
+    <script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ad.js"></script>
+        <!--new top-->
+       
+        <link rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/index.css">
+        <!--new top-->
+    
+      <!-- ad begin -->
+         <script language="javascript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/tracking(1).js"></script>
+    <!-- ad end-->
+
+    <link rel="Stylesheet" type="text/css" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/style.css">
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://blog.csdn.net/lishuo_OS_DS/rss/list">
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/default.css">
+ 
+
+
+<script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/share.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><link rel="stylesheet" type="text/css" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/job_reco.css"><script type="text/javascript" charset="utf-8" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/main.js"></script><link href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/bdsstyle.css" rel="stylesheet" type="text/css"><link rel="stylesheet" type="text/css" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/style(1).css"><link type="text/css" rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/style(2).css"><script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/get_ads.php" type="text/javascript"></script><script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/logger.js"></script><link rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/share_style0_16.css"></head>
+<body><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div><iframe frameborder="0" style="display: none;" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/saved_resource.html"></iframe><div id="MathJax_Message" style="display: none;"></div>
+    <!-- 广告位开始 -->
+        <ins data-revive-zoneid="149" data-revive-id="8c38e720de1c90a6f6ff52f3f89c4d57" id="revive-0-0"></ins>
+    <!-- 广告位结束 -->
+
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/html.js" type="text/javascript"></script><div class="csdn-toolbar csdn-toolbar-skin-black ">        <div class="container row center-block ">          <div class="col-md-3 pull-left logo clearfix"><a href="http://www.csdn.net/?ref=toolbar" title="CSDN首页" target="_blank" class="icon"></a><a title="频道首页" href="http://blog.csdn.net/?ref=toolbar_logo" class="img blog-icon"></a></div>          <div class="pull-right login-wrap unlogin">            <ul class="btns">              <li class="loginlink"><a href="https://passport.csdn.net/account/login?ref=toolbar" target="_top">登录&nbsp;</a>|<a target="_top" href="http://passport.csdn.net/account/mobileregister?ref=toolbar&amp;action=mobileRegister">&nbsp;注册</a></li>              <li class="search">                <div class="icon on-search-icon">                  <div class="wrap">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <form action="http://so.csdn.net/search" method="get" target="_blank">                      <input type="hidden" value="toolbar" name="ref" accesskey="2">                      <div class="border">                        <input placeholder="搜索" type="text" value="" name="q" accesskey="2"><span class="icon-enter-sm"></span>                      </div>                    </form>                  </div>                </div>              </li>              <li class="favor">                <div class="icon on-favor-icon">                  <div class="wrap">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <div style="display:none;" class="favor-success"><span class="msg">收藏成功</span>                      <div class="btns"><span class="btn btn-primary ok">确定</span></div>                    </div>                    <div style="display:none;" class="favor-failed"><span class="icon-danger-lg"></span><span class="msg">收藏失败，请重新收藏</span>                      <div class="btns"><span class="btn btn-primary ok">确定</span></div>                    </div>                    <form role="form" class="form-horizontal favor-form">                      <div class="form-group">                        <div class="clearfix">                          <label for="input-title" class="col-sm-2 control-label">标题</label>                          <div class="col-sm-10">                            <input id="inputTitle" type="text" placeholder="" class="title form-control">                          </div>                        </div>                        <div class="alert alert-danger"><strong></strong>标题不能为空</div>                      </div>                      <div class="form-group">                        <label for="input-url" class="col-sm-2 control-label">网址</label>                        <div class="col-sm-10">                          <input id="input-url" type="text" placeholder="" class="url form-control">                        </div>                      </div>                      <div class="form-group">                        <label for="input-tag" class="col-sm-2 tag control-label">标签</label>                        <div class="col-sm-10">                          <input id="input-tag" type="text" class="form-control tag">                        </div>                      </div>                      <div class="form-group">                        <label for="input-description" class="description col-sm-2 control-label">摘要</label>                        <div class="col-sm-10">                          <textarea id="input-description" class="form-control description"></textarea>                        </div>                      </div>                      <div class="form-group">                        <div class="col-sm-offset-2 col-sm-10 ft">                          <div class="col-sm-4 pull-left">                            <div class="checkbox">                              <label>                                <input type="checkbox" name="share" checked="checked" class="share">公开                              </label>                            </div>                          </div>                          <div class="col-sm-8 pull-right favor-btns">                            <button type="button" class="cancel btn btn-default">取消</button>                            <button type="submit" class="submit btn btn-primary">收藏</button>                          </div>                        </div>                      </div>                    </form>                  </div>                </div>              </li>              <li class="notify">                <div style="display:none" class="number"></div>                <div style="display:none" class="icon-hasnotes-sm"></div>                <div id="header_notice_num"></div>                <div class="icon on-notify-icon">                  <div class="wrap">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <div id="note1" class="csdn_note">                      <div class="box"></div>                    <iframe src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/saved_resource(1).html" frameborder="0" allowtransparency="true" style="z-index:-1;position:absolute;top:0;left:0;width:100%;height:100%;background:transparent"></iframe></div>                  </div>                </div>              </li>              <li class="ugc">                <div class="icon on-ugc-icon">                  <div class="wrap clearfix">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <dl>                      <dt><a href="http://geek.csdn.net/news/expert?ref=toolbar" target="_blank" class="p-news clearfix" style="display:none;"><em class="icon"></em><span>分享资讯</span></a></dt>                      <dt style="border: none;"><a href="http://u.download.csdn.net/upload?ref=toolbar" target="_blank" class="p-doc clearfix"><em class="icon"></em><span>传PPT/文档</span></a></dt>                      <dt><a href="http://bbs.csdn.net/topics/new?ref=toolbar" target="_blank" class="p-ask clearfix"><em class="icon"></em><span>提问题</span></a></dt>                      <dt><a href="http://write.blog.csdn.net/postedit?ref=toolbar" target="_blank" class="p-blog clearfix"><em class="icon"></em><span>写博客</span></a></dt>                      <dt><a href="http://u.download.csdn.net/upload?ref=toolbar" target="_blank" class="p-src clearfix"><em class="icon"></em><span>传资源</span></a></dt>                      <dt><a href="https://code.csdn.net/projects/new?ref=toolbar" target="_blank" class="c-obj clearfix"><em class="icon"></em><span>创建项目</span></a></dt>                      <dt><a href="https://code.csdn.net/snippets/new?ref=toolbar" target="_blank" class="c-code clearfix"><em class="icon"></em><span>创建代码片</span></a></dt>                    </dl>                  </div>                </div>              </li>              <li class="profile">                <div class="icon on-profile-icon"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/100x100.jpg" class="curr-icon-img">                  <div class="wrap clearfix">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                    <div class="bd">                      <dl class="clearfix">                        <dt class="pull-left img"><a target="_blank" href="http://my.csdn.net/?ref=toolbar" class="avatar"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/100x100.jpg"></a></dt>                        <dd class="info" style="border: none;"><a target="_blank" href="http://my.csdn.net/?ref=toolbar" class="nickname"></a><a class="set-nick" href="https://passport.csdn.net/account/profile">设置昵称<span class="write-icon"></span></a><span class="dec"><a class="fill-dec" href="http://my.csdn.net/" target="_blank">编辑自我介绍，让更多人了解你<span class="write-icon"></span></a></span></dd>                      </dl>                    </div>                    <div class="ft clearfix"><a target="_blank" href="http://my.csdn.net/my/account/changepwd?ref=toolbar" class="pull-left"><span class="icon-cog"></span>帐号设置</a><a href="https://passport.csdn.net/account/logout?ref=toolbar" target="_top" class="pull-left" style="margin-left:132px; width:18px; height:27px; white-space:nowrap; overflow:hidden;"><span class="icon-signout"></span><span class="out">退出</span></a></div>                  </div>                </div>              </li>              <li class="apps">                <div id="chasnew123" class="hasnew" style="display: none;"></div>                <div id="cappsarea123" class="icon on-apps-icon">                  <div class="wrap clearfix">                    <div class="curr-icon-wrap">                      <div class="curr-icon"></div>                    </div>                  <div class="detail">                    <dl>                      <dt>                        <h5>社区</h5>                      </dt>                      <dd> <a href="http://blog.csdn.net/?ref=toolbar" target="_blank">博客</a></dd>                      <dd> <a href="http://bbs.csdn.net/?ref=toolbar" target="_blank">论坛</a></dd>                      <dd> <a href="http://download.csdn.net/?ref=toolbar" target="_blank">下载</a></dd>                      <dd> <a href="http://lib.csdn.net/?ref=toolbar" target="_blank">知识库</a></dd>                      <dd><a href="http://ask.csdn.net/?ref=toolbar" target="_blank">技术问答</a></dd>                      <dd><a href="http://geek.csdn.net/?ref=toolbar" target="_blank">极客头条</a></dd>                      <dd style="display:none"> <a href="http://hero.csdn.net/?ref=toolbar" target="_blank">英雄会</a></dd>                    </dl>                  </div>                  <div class="detail">                    <dl>                      <dt>                        <h5>服务</h5>                      </dt>                      <dd style="display:none"> <a href="http://job.csdn.net/?ref=toolbar" target="_blank">JOB<img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/new.gif" style="display: none; margin-top: -26px; width: 23px;"></a></dd>                      <dd> <a href="http://edu.csdn.net/?ref=toolbar" target="_blank">学院<img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/new.gif" style="display: none; margin-top: -26px; width: 23px;"></a></dd>                      <dd> <a href="https://code.csdn.net/?ref=toolbar" target="_blank">CODE</a></dd>                      <dd> <a href="http://huiyi.csdn.net/?ref=toolbar" target="_blank">活动</a></dd>                      <dd> <a href="http://www.csto.com/?ref=toolbar" target="_blank">CSTO</a></dd>                      <dd> <a href="http://mall.csdn.net/?ref=toolbar" target="_blank">C币兑换<img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/new.gif" style="display: none; margin-top: -26px; width: 23px;"></a></dd>                    </dl>                  </div>                  <div class="detail last">                    <dl>                      <dt>                        <h5>俱乐部</h5>                      </dt>                      <dd> <a href="http://cto.csdn.net/?ref=toolbar" target="_blank">CTO俱乐部</a></dd>                      <dd> <a href="http://student.csdn.net/?ref=toolbar" target="_blank">高校俱乐部</a></dd>                    </dl>                  </div>                </div>              </div>            </li>            </ul>          </div>        </div>    </div>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/lishuo_os_ds">后山人的专栏</a></h2>
+            <h3>世事洞明皆学问，人情练达即文章。</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>
+            
+                <li id="btnContents"><a href="http://blog.csdn.net/lishuo_os_ds?viewmode=contents"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_mulu&#39;])">
+                    <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/lishuo_os_ds?viewmode=list"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_zhaiyao&#39;])">
+                    <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/lishuo_os_ds/rss/list"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_RSS&#39;])">
+                    <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ico_rss.gif">订阅</span></a></li>                
+            
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "lishuo_OS_DS";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/lishuo_os_ds";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod="popu_3"> 
+
+<a href="http://ask.csdn.net/subjects/5" target="_blank">
+<font color="red">【专家问答】阿里陈康贤：探讨大型网站之架构
+</font></a>
+&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/blogdevteam/article/details/51423859" target="_blank">
+<font color="blue">走进VR开发世界——我们离开发一款VR大作还有多远？</font></a>
+&nbsp;&nbsp;&nbsp;
+<a href="http://blog.csdn.net/robbin2015/article/details/51446176" target="_blank">
+<font color="red">CSDN发福利啦！C币、京东卡、现金任你选
+</font></a>
+&nbsp;&nbsp;&nbsp;
+
+
+
+</div>                        </div>
+                        
+
+
+
+<!-- 广告位开始 -->
+<div class="J_adv" data-view="true" data-mod="ad_popu_72" data-mtp="40" data-order="40" data-con="ad_content_217" style="width: 1px; height: 1px; position: fixed; right: 10px; bottom: 10px; z-index: 999; background-color: transparent;"><div id="location_parent"></div><script>document.getElementById('location_parent').parentNode.style.height='1px';document.getElementById('location_parent').parentNode.style.width='1px';document.getElementById('location_parent').parentNode.style.position='fixed';document.getElementById('location_parent').parentNode.style.right='10px';document.getElementById('location_parent').parentNode.style.bottom='10px';document.getElementById('location_parent').parentNode.style.zIndex=999;document.getElementById('location_parent').parentNode.style.backgroundColor='transparent';</script><!-- 广告占位容器 --><!-- 投放代码 --><script type="text/javascript">(window['cproStyleApi'] = window['cproStyleApi'] || {})['u2392861']={at:'3',rsi0:'300',rsi1:'250',pat:'17',tn:'baiduCustNativeAD_xuanfu',rss1:'#FFFFFF',conBW:'1',adp:'1',ptt:'0',titFF:'%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91',titFS:'14',rss2:'#000000',titSU:'0'};/*服务器频道首页置顶Banner960*90，创建于2014-7-3*/(window.cproArray = window.cproArray || []).push({id:'u2392861'});  </script>  <script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/f.js" type="text/javascript"></script></div>
+<!-- 广告位结束 -->
+
+  
+<link href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/comment1.css" type="text/css" rel="stylesheet">
+<link href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/style1.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/jquery.cookie.js"></script>
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/main(1).js"></script>
+<link rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/markdown_views.css">
+<link rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/category.css">
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/MathJax.js"></script>
+
+ <script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/web-storage-cache.min.js"></script>
+
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/web-storage-cache.min.js"></script>
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/replace.min.js"></script>
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+           
+            var isBole = false;
+            
+          
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Repost"></span>
+
+
+    <h1>
+        <span class="link_title"><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475">
+        GitHub详细教程            
+        </a></span>
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_l">
+            <span class="link_categories">
+            标签：
+              <a href="http://www.csdn.net/tag/git" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">git</a><a href="http://www.csdn.net/tag/branch" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">branch</a><a href="http://www.csdn.net/tag/%e7%89%88%e6%9c%ac%e6%8e%a7%e5%88%b6%e7%b3%bb%e7%bb%9f" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">版本控制系统</a><a href="http://www.csdn.net/tag/merge" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">merge</a><a href="http://www.csdn.net/tag/testing" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">testing</a><a href="http://www.csdn.net/tag/file" target="_blank" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_tag&#39;]);">file</a>
+            </span>
+        </div>
+        <div class="article_r">
+            <span class="link_postdate">2012-10-16 19:07</span>
+            <span class="link_view" title="阅读次数">25537人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#comments" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_pinglun&#39;])">评论</a>(5)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle(&#39;GitHub详细教程&#39;,&#39;8078475&#39;);return false;" title="收藏" target="_blank">收藏</a></span>
+             <span class="link_report"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#report" onclick="javascript:report(8078475,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>
+    <div class="embody" style="display:none" id="embody">
+        <span class="embody_t">本文章已收录于：</span>
+        <div class="embody_c" id="lib" value="{&quot;err&quot;:0,&quot;msg&quot;:&quot;ok&quot;,&quot;data&quot;:[]}"></div>
+    </div>
+    <style type="text/css">        
+            .embody{
+                padding:10px 10px 10px;
+                margin:0 -20px;
+                border-bottom:solid 1px #ededed;                
+            }
+            .embody_b{
+                margin:0 ;
+                padding:10px 0;
+            }
+            .embody .embody_t,.embody .embody_c{
+                display: inline-block;
+                margin-right:10px;
+            }
+            .embody_t{
+                font-size: 12px;
+                color:#999;
+            }
+            .embody_c{
+                font-size: 12px;
+            }
+            .embody_c img,.embody_c em{
+                display: inline-block;
+                vertical-align: middle;               
+            }
+             .embody_c img{               
+                width:30px;
+                height:30px;
+            }
+            .embody_c em{
+                margin: 0 20px 0 10px;
+                color:#333;
+                font-style: normal;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var lib = eval("("+$("#lib").attr("value")+")");
+            var html = "";
+            if (lib.err == 0) {
+                $.each(lib.data, function (i) {
+                    var obj = lib.data[i];
+                    //html += '<img src="' + obj.logo + '"/>' + obj.name + "&nbsp;&nbsp;";
+                    html += ' <a href="' + obj.url + '" target="_blank">';
+                    html += ' <img src="' + obj.logo + '">';
+                    html += ' <em><b>' + obj.name + '</b></em>';
+                    html += ' </a>';
+                });
+                if (html != "") {
+                    setTimeout(function () {
+                        $("#lib").html(html);
+                        /*
+                        var testhtml = "";
+                        testhtml += '<a href="#">';
+                        testhtml += '<img src="http://img.knowledge.csdn.net/upload/base/1455589744328_328.jpg">';
+                        testhtml += '<em>Android知识库</em>';
+                        testhtml += '</a>';
+                        $(".embody_c").html(testhtml);
+                        */
+                        $("#embody").show();
+                    }, 100);
+                }
+            }          
+            
+        });
+    </script>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label onclick="GetCategoryArticles(&#39;1256689&#39;,&#39;lishuo_OS_DS&#39;,&#39;top&#39;,&#39;8078475&#39;);">
+                        <span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_fenlei&#39;]);">Git<em>（4）</em></span>
+                      <img class="arrow-down" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256689" target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_1256689">                            
+                            </ul>
+                        </div>
+                    </label>                    
+        </div>
+    </div>
+    <script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/category.js"></script>  
+
+  
+
+  
+  
+     
+
+<div style="clear:both"></div><div style="border:solid 1px #ccc; background:#eee; float:left; min-width:200px;padding:4px 10px;"><p style="text-align:right;margin:0;"><span style="float:left;">目录<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" title="系统根据文章中H1到H6标签自动生成文章目录">(?)</a></span><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" onclick="javascript:return openct(this);" title="展开">[+]</a></p><ol style="display:none;margin-left:14px;padding-left:14px;line-height:160%;"><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t0">GitHub详细教程</a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t1">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t2">Table of Contents</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t3">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t4">Git详细教程 </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t5">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t6">1 Git简介 </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t7">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t8">11 Git是何方神圣 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t9">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t10">12 重要的术语 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t11">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t12">13 索引 </a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t13">2 Git安装 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t14">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t15">3 Git配置 </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t16">31 用户信息 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t17">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t18">32 高亮显示 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t19">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t20">33 忽略特定的文件 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t21">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t22">34 使用gitkeep来追踪空的文件夹</a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t23">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t24">4 开始操作Git </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t25">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t26">41 创建内容 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t27">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t28">42 创建仓库添加文件和提交更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t29">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t30">43 diff命令与commit更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t31">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t32">44 Status Diff 和 Commit Log</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t33">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t34">45 更正提交的信息 - git amend</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t35">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t36">46 删除文件 </a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t37">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t38">5 远端仓库remote repositories</a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t39">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t40">51 设置一个远端的Git仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t41">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t42">52 推送更改到其他的仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t43">53 添加远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t44">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t45">54 显示已有的远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t46">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t47">55 克隆仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t48">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t49">56 拉取Pull更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t50">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t51">57 还原更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t52">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t53">58 标记 </a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t54">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t55">6 分支合并 </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t56">61 分支 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t57">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t58">62 合并 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t59">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t60">63 删除分支 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t61">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t62">64 推送push一个分支到远端仓库 </a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t63">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t64">7 解决合并冲突 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t65">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t66">8 变基Rebase </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t67">81 在同一分支中应用Rebase Commit</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t68">82 Rebasing多个分支 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t69">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t70">83 Rebase最佳实践 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t71">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t72">84 创建和应用补丁 </a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t73">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t74">9 定义同名命令 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t75">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t76">10 放弃跟踪文件 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t77">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t78">11 其他有用的命令 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t79">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t80">12 安装Git服务 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t81">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t82">13 在线的远端仓库 </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t83">131 克隆远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t84">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t85">132 添加远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t86">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t87">133 通过http和代理服务器进行远端操作</a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t88">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t89">14 Git服务提供商 </a></li><ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t90">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t91">141 GitHub </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t92">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t93">142 Bitbucket </a></li></ol><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t94">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t95">15 Git的图形接口 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t96">16 Kindle版本教程 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t97">
+</a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t98">17 问题与讨论 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#t99">18 链接和文章 </a></li></ol></ol></ol></div><div style="clear:both"></div><div id="article_content" class="article_content">
+
+
+<style type="text/css">
+<!--
+html
+	{font-family:Times,serif;
+	font-size:12pt}
+.title
+	{text-align:center}
+.todo
+	{color:red}
+.done
+	{color:green}
+.tag
+	{background-color:#add8e6;
+	font-weight:normal}
+.timestamp
+	{color:#bebebe}
+.timestamp-kwd
+	{color:#5f9ea0}
+p.verse
+	{margin-left:3%}
+pre
+	{border:1pt solid #AEBDCC;
+	background-color:#F3F5F7;
+	padding:5pt;
+	font-family:courier,monospace;
+	font-size:90%;
+	overflow:auto}
+table
+	{border-collapse:collapse}
+td, th
+	{vertical-align:top}
+dt
+	{font-weight:bold}
+div.figure
+	{padding:0.5em}
+div.figure p
+	{text-align:center}
+.linenr
+	{font-size:smaller}
+.code-highlighted
+	{background-color:#ffff00}
+.org-info-js_info-navigation
+	{border-style:none}
+#org-info-js_console-label
+	{font-size:10px;
+	font-weight:bold;
+	white-space:nowrap}
+.org-info-js_search-highlight
+	{background-color:#ffff00;
+	color:#000000;
+	font-weight:bold}
+-->
+</style>
+
+
+<div id="content">
+<h1 class="title"><a name="t0"></a>GitHub详细教程</h1>
+<div id="table-of-contents">
+<h2><a name="t1"></a><br>
+</h2>
+<h2><a name="t2"></a>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1">1 Git详细教程 </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.1">1.1 Git简介 </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.1.1">1.1.1 Git是何方神圣? </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.1.2">1.1.2 重要的术语 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.1.3">1.1.3 索引 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.2">1.2 Git安装 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.3">1.3 Git配置 </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.3.1">1.3.1 用户信息 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.3.2">1.3.2 高亮显示 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.3.3">1.3.3 忽略特定的文件 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.3.4">1.3.4 使用.gitkeep来追踪空的文件夹 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4">1.4 开始操作Git </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4.1">1.4.1 创建内容 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4.2">1.4.2 创建仓库、添加文件和提交更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4.3">1.4.3 diff命令与commit更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4.4">1.4.4 Status, Diff 和 Commit Log </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4.5">1.4.5 更正提交的信息 - git amend </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.4.6">1.4.6 删除文件 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5">1.5 远端仓库（remote repositories） </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.1">1.5.1 设置一个远端的Git仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.2">1.5.2 推送更改到其他的仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.3">1.5.3 添加远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.4">1.5.4 显示已有的远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.5">1.5.5 克隆仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.6">1.5.6 拉取（Pull）更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.7">1.5.7 还原更改 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.5.8">1.5.8 标记 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.6">1.6 分支、合并 </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.6.1">1.6.1 分支 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.6.2">1.6.2 合并 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.6.3">1.6.3 删除分支 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.6.4">1.6.4 推送（push）一个分支到远端仓库 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.7">1.7 解决合并冲突 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.8">1.8 变基（Rebase） </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.8.1">1.8.1 在同一分支中应用Rebase Commit </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.8.2">1.8.2 Rebasing多个分支 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.8.3">1.8.3 Rebase最佳实践 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.8.4">1.8.4 创建和应用补丁 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.9">1.9 定义同名命令 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.10">1.10 放弃跟踪文件 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.11">1.11 其他有用的命令 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.12">1.12 安装Git服务 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.13">1.13 在线的远端仓库 </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.13.1">1.13.1 克隆远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.13.2">1.13.2 添加远端仓库 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.13.3">1.13.3 通过http和代理服务器进行远端操作 </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.14">1.14 Git服务提供商 </a>
+<ul>
+<li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.14.1">1.14.1 GitHub </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.14.2">1.14.2 Bitbucket </a></li></ul>
+</li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.15">1.15 Git的图形接口 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.16">1.16 Kindle版本教程 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.17">1.17 问题与讨论 </a></li><li><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#sec-1.18">1.18 链接和文章</a></li></ul>
+</li></ul>
+</div>
+</div>
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><a name="t3"></a><span class="section-number-2"><br>
+</span></h2>
+<h2 id="sec-1"><a name="t4"></a><span class="section-number-2">1</span> Git详细教程 </h2>
+<div class="outline-text-2" id="text-1"></div>
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><a name="t5"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.1"><a name="t6"></a><span class="section-number-3">1.1</span> Git简介 </h3>
+<div class="outline-text-3" id="text-1.1"></div>
+<div id="outline-container-1.1.1" class="outline-4">
+<h4 id="sec-1.1.1"><a name="t7"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.1.1"><a name="t8"></a><span class="section-number-4">1.1.1</span> Git是何方神圣? </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.1.1">
+<p>Git是用C语言开发的分布版本控制系统。版本控制系统可以保留一个文件集合的历史记录，并能回滚文件集合到另一个状态（历史记录状态）。另一个状态可以是不同的文件，也可以是不同的文件内容。举个例子，你可以将文件集合转换到两天之前的状态，或者你可以在生产代码和实验性质的代码之间进行切换。文件集合往往被称作是“源代码”。在一个分布版本控制系统中，每个人都有一份完整的源代码（包括源代码所有的历史记录信息），而且可以对这个本地的数据进行操作。分布版本控制系统不需要一个集中式的代码仓库。</p>
+<p><br>
+</p>
+<p>当你对本地的源代码进行了修改，你可以标注他们跟下一个版本相关（将他们加到index中），然后提交到仓库中来（commit）。Git保存了所有的版本信息，所以你可以转换你的源代码到任何的历史版本。你可以对本地的仓库进行代码的提交，然后与其他的仓库进行同步。你可以使用Git来进行仓库的克隆（clone）操作，完整的复制一个已有的仓库。仓库的所有者可以通过push操作（推送变更到别处的仓库）或者Pull操作（从别处的仓库拉取变更）来同步变更。</p>
+<p><br>
+</p>
+<p>Git支持分支功能（branch）。如果你想开发一个新的产品功能，你可以建立一个分支，对这个分支的进行修改，而不至于会影响到主支上的代码。</p>
+<p><br>
+</p>
+<p>Git提供了命令行工具；这个教程会使用命令行。你也可以找到图形工具，譬如与Eclipse配套的EGit工具，但是这些都不会在这个教程中进行描述。</p>
+</div>
+</div>
+<div id="outline-container-1.1.2" class="outline-4">
+<h4 id="sec-1.1.2"><a name="t9"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.1.2"><a name="t10"></a><span class="section-number-4">1.1.2</span> 重要的术语 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.1.2">
+<p><code>Git 术语</code></p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption><colgroup><col align="left"><col align="left"></colgroup>
+<thead>
+<tr>
+<th scope="col">术语</th>
+<th scope="col">定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>仓库</td>
+<td>一个仓库包括了所有的版本信息、所有的分支和标记信息.</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>在Git中仓库的每份拷贝都是完整的。仓库让你可以从中</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>取得你的工作副本。</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>一个分支意味着一个独立的、拥有自己历史信息的代码线</td>
+</tr>
+<tr>
+<td>分支</td>
+<td>（code line）。你可以从已有的代码中生成一个新的分支</td>
+</tr>
+<tr>
+<td>Branches</td>
+<td>，这个分支与剩余的分支完全独立。默认的分支往往是叫</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>master。用户可以选择一个分支，选择一个分支叫做</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>checkout.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>标记</td>
+<td>一个标记指的是某个分支某个特定时间点的状态。通过标</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>记，可以很方便的切换到标记时的状态，例如2009年1月25</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>号在testing分支上的代码状态</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>提交</td>
+<td>提交代码后，仓库会创建一个新的版本。这个版本可以在</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>后续被重新获得。每次提交都包括作者和提交者，作者和</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>提交者可以是不同的人</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>URL</td>
+<td>URl用来标识一个仓库的位置</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>用来表示代码的一个版本状态。Git通过用SHA1 hash算法</td>
+</tr>
+<tr>
+<td>修订</td>
+<td>表示的id来标识不同的版本。每一个 SHA1 id都是160位长</td>
+</tr>
+<tr>
+<td>Revision</td>
+<td>,16进制标识的字符串.最新的版本可以通过HEAD来获取.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>之前的版本可以通过"HEAD~1"来获取，以此类推。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-1.1.3" class="outline-4">
+<h4 id="sec-1.1.3"><a name="t11"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.1.3"><a name="t12"></a><span class="section-number-4">1.1.3</span> 索引 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.1.3">
+<p>Git 需要将代码的变化显示的与下一次提交进行关联。举个例子，如果你对一个文件继续了修改，然后想将这些修改提交到下一次提交中，你必须将这个文件提交到索引中，通过git add file命令。这样索引可以保存所有变化的快照。</p>
+<p><br>
+</p>
+<p>新增的文件总是要显示的添加到索引中来。对于那些之前已经提交过的文件，可以在commit命令中使用-a 选项达到提交到索引的目的。</p>
+<p><br>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2"><a name="t13"></a><span class="section-number-3">1.2</span> Git安装 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.2">
+<p>在Ubuntu上，你可以通过apt来安装git命令行工具</p>
+<p><br>
+</p>
+<pre class="example" name="code">sudo apt-get install git-core
+</pre>
+<p><br>
+</p>
+<p>对于其他的Linux版本，请查看相关的软件包安装工具使用方法。msysgit项目提供了Windows版本的Git，地址是<a href="http://code.google.com/p/msysgit/">http://code.google.com/p/msysgit/</a></p>
+</div>
+</div>
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3"><a name="t14"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.3"><a name="t15"></a><span class="section-number-3">1.3</span> Git配置 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.3">
+<p>你可以在.gitconfig文件中防止git的全局配置。文件位于用户的home目录。上述已经提到每次提交都会保存作者和提交者的信息，这些信息都可以保存在全局配置中。后续将会介绍配置用户信息、高亮显示和忽略特定的文件。</p>
+<p><br>
+</p>
+</div>
+<div id="outline-container-1.3.1" class="outline-4">
+<h4 id="sec-1.3.1"><a name="t16"></a><span class="section-number-4">1.3.1</span> 用户信息 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.3.1">
+<p>通过如下命令来配置用户名和Email </p>
+<pre class="example" name="code">git config --global user.name "Example Surname"
+
+git config --global user.email "your.email@gmail.com"
+# Set default so that all changes are always pushed to the repository
+git config --global push.default "matching"
+</pre>
+<p><br>
+</p>
+<p>获取Git配置信息，执行以下命令：</p>
+<pre class="example" name="code">git config --list
+</pre>
+</div>
+</div>
+<div id="outline-container-1.3.2" class="outline-4">
+<h4 id="sec-1.3.2"><a name="t17"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.3.2"><a name="t18"></a><span class="section-number-4">1.3.2</span> 高亮显示 </h4>
+<div class="outline-text-4" id="text-1.3.2">
+<p>以下命令会为终端配置高亮</p>
+<pre class="example" name="code">git config --global color.status auto
+git config --global color.branch auto
+</pre>
+</div>
+</div>
+<div id="outline-container-1.3.3" class="outline-4">
+<h4 id="sec-1.3.3"><a name="t19"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.3.3"><a name="t20"></a><span class="section-number-4">1.3.3</span> 忽略特定的文件 </h4>
+<div class="outline-text-4" id="text-1.3.3">
+<p>可以配置Git忽略特定的文件或者是文件夹。这些配置都放在.gitignore文件中。这个文件可以存在于不同的文件夹中，可以包含不同的文件匹配模式。为了让Git忽略bin文件夹，在主目录下放置.gitignore文件，其中内容为bin。</p>
+<p>同时Git也提供了全局的配置，core.excludesfile。</p>
+</div>
+</div>
+<div id="outline-container-1.3.4" class="outline-4">
+<h4 id="sec-1.3.4"><a name="t21"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.3.4"><a name="t22"></a><span class="section-number-4">1.3.4</span> 使用.gitkeep来追踪空的文件夹</h4>
+<div class="outline-text-4" id="text-1.3.4">
+<p>Git会忽略空的文件夹。如果你想版本控制包括空文件夹，根据惯例会在空文件夹下放置.gitkeep文件。其实对文件名没有特定的要求。一旦一个空文件夹下有文件后，这个文件夹就会在版本控制范围内。</p>
+</div>
+</div>
+</div>
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4"><a name="t23"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.4"><a name="t24"></a><span class="section-number-3">1.4</span> 开始操作Git </h3>
+<div class="outline-text-3" id="text-1.4">
+<p>后续将通过一个典型的Git工作流来学习。在这个过程中，你会创建一些文件、创建一个本地的Git仓库、提交你的文件到这个仓库中。这之后，你会克隆一个仓库、在仓库之间通过pull和push操作来交换代码的修改。注释（以#开头）解释了命令的具体含义，让我们打开命令行开始操作吧。</p>
+</div>
+<div id="outline-container-1.4.1" class="outline-4">
+<h4 id="sec-1.4.1"><a name="t25"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.4.1"><a name="t26"></a><span class="section-number-4">1.4.1</span> 创建内容 </h4>
+<div class="outline-text-4" id="text-1.4.1">
+<p>下面创建一些文件，它们会被放到版本控制之中</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24">#</span><span style="color:#ff7f24">Switch to home
+</span><span style="color:#b0c4de">cd</span> ~/
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Create a directory
+</span>mkdir ~/repo01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch into it
+</span><span style="color:#b0c4de">cd</span> repo01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Create a new directory
+</span>mkdir datafiles
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Create a few files
+</span>touch test01
+touch test02
+touch test03
+touch datafiles/data.txt
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Put a little text into the first file
+</span>ls &gt;test01
+</pre>
+</div>
+</div>
+<div id="outline-container-1.4.2" class="outline-4">
+<h4 id="sec-1.4.2"><a name="t27"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.4.2"><a name="t28"></a><span class="section-number-4">1.4.2</span> 创建仓库、添加文件和提交更改 </h4>
+<div class="outline-text-4" id="text-1.4.2">
+<p>每个Git仓库都是放置在.git文件夹下.这个目录包含了仓库的所有历史记录，.git/config文件包含了仓库的本地配置。</p>
+<p>以下将会创建一个Git仓库，添加文件倒仓库的索引中，提交更改。</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Initialize the local Git repository
+</span>git init
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Add all (files and directories) to the Git repository
+</span>git add .
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Make a commit of your file to the local repository
+</span>git commit -m <span style="color:#ffa07a">"Initial commit"</span>
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Show the log file
+</span>git log
+</pre>
+</div>
+</div>
+<div id="outline-container-1.4.3" class="outline-4">
+<h4 id="sec-1.4.3"><a name="t29"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.4.3"><a name="t30"></a><span class="section-number-4">1.4.3</span> diff命令与commit更改 </h4>
+<div class="outline-text-4" id="text-1.4.3">
+<p>通过git diff命令，用户可以查看更改。通过改变一个文件的内容，看看gitdiff命令输出什么，然后提交这个更改到仓库中</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Make some changes to the file
+</span><span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"This is a change"</span> &gt; test01
+<span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"and this is another change"</span> &gt; test02
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Check the changes via the diff command 
+</span>git diff
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Commit the changes, -a will commit changes for modified files
+</span><span style="color:#ff7f24"># </span><span style="color:#ff7f24">but will not add automatically new files
+</span>git commit -a -m <span style="color:#ffa07a">"These are new changes"</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-1.4.4" class="outline-4">
+<h4 id="sec-1.4.4"><a name="t31"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.4.4"><a name="t32"></a><span class="section-number-4">1.4.4</span> Status, Diff 和 Commit Log</h4>
+<div class="outline-text-4" id="text-1.4.4">
+<p>下面会向你展示仓库现有的状态以及过往的提交历史</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Make some changes in the file
+</span><span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"This is a new change"</span> &gt; test01
+<span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"and this is another new change"</span> &gt; test02
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">See the current status of your repository 
+</span><span style="color:#ff7f24"># </span><span style="color:#ff7f24">(which files are changed / new / deleted)
+</span>git status
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Show the differences between the uncommitted files 
+</span><span style="color:#ff7f24"># </span><span style="color:#ff7f24">and the last commit in the current branch
+</span>git diff
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Add the changes to the index and commit
+</span>git add . &amp;&amp; git commit -m <span style="color:#ffa07a">"More chaanges - typo in the commit message"</span>
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Show the history of commits in the current branch
+</span>git log
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">This starts a nice graphical view of the changes
+</span>gitk --all
+</pre>
+</div>
+</div>
+<div id="outline-container-1.4.5" class="outline-4">
+<h4 id="sec-1.4.5"><a name="t33"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.4.5"><a name="t34"></a><span class="section-number-4">1.4.5</span> 更正提交的信息 - git amend</h4>
+<div class="outline-text-4" id="text-1.4.5">
+<p>通过git amend命令，我们可以修改最后提交的的信息。上述的提交信息中存在错误，下面会修改这个错误。</p>
+<pre class="example" name="code">git commit --amend -m "More changes - now correct"
+</pre>
+</div>
+</div>
+<div id="outline-container-1.4.6" class="outline-4">
+<h4 id="sec-1.4.6"><a name="t35"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.4.6"><a name="t36"></a><span class="section-number-4">1.4.6</span> 删除文件 </h4>
+<div class="outline-text-4" id="text-1.4.6">
+<p>如果你删除了一个在版本控制之下的文件，那么使用git add .不会在索引中删除这个文件。需要通过带-a选项的git commit命令和-A选项的git add命令来完成</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Create a file and put it under version control
+</span>touch nonsense.txt
+git add . &amp;&amp; git commit -m <span style="color:#ffa07a">"a new file has been created"</span>
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Remove the file
+</span>rm nonsense.txt
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Try standard way of committing -&gt; will not work 
+</span>git add . &amp;&amp; git commit -m <span style="color:#ffa07a">"a new file has been created"</span>
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Now commit with the -a flag
+</span>git commit -a -m <span style="color:#ffa07a">"File nonsense.txt is now removed"</span>
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Alternatively you could add deleted files to the staging index via
+</span>git add -A . 
+git commit -m <span style="color:#ffa07a">"File nonsense.txt is now removed"</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5"><a name="t37"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.5"><a name="t38"></a><span class="section-number-3">1.5</span> 远端仓库（remote repositories）</h3>
+<div class="outline-text-3" id="text-1.5"></div>
+<div id="outline-container-1.5.1" class="outline-4">
+<h4 id="sec-1.5.1"><a name="t39"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.1"><a name="t40"></a><span class="section-number-4">1.5.1</span> 设置一个远端的Git仓库 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.5.1">
+<p>我们将创建一个远端的Git仓库。这个仓库可以存储在本地或者是网络上。</p>
+<p><br>
+</p>
+<p>远端Git仓库和标准的Git仓库有如下差别：一个标准的Git仓库包括了源代码和历史信息记录。我们可以直接在这个基础上修改代码，因为它已经包含了一个工作副本。但是远端仓库没有包括工作副本，只包括了历史信息。可以使用–bare选项来创建一个这样的仓库。</p>
+<p><br>
+</p>
+<p>为了方便起见，示例中的仓库创建在本地文件系统上 </p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch to the first repository
+</span><span style="color:#b0c4de">cd</span> ~/repo01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">
+</span>git clone --bare . ../remote-repository.git
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Check the content, it is identical to the .git directory in repo01
+</span>ls ~/remote-repository.git
+</pre>
+</div>
+</div>
+<div id="outline-container-1.5.2" class="outline-4">
+<h4 id="sec-1.5.2"><a name="t41"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.2"><a name="t42"></a><span class="section-number-4">1.5.2</span> 推送更改到其他的仓库 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.5.2">
+<p>做一些更改，然后将这些更改从你的第一个仓库推送到一个远端仓库&nbsp;</p>
+<p><br>
+</p>
+<p>cd ~/repo01</p>
+<p>echo "Hello, hello. Turn your radio on" &gt; test01echo "Bye, bye. Turn your radio off" &gt; test02</p>
+<p>git commit -a -m "Some changes"</p>
+<p>git push ../remote-repository.git</p>
+<p><br>
+</p>
+</div>
+</div>
+<div id="outline-container-1.5.3" class="outline-4">
+<h4 id="sec-1.5.3"><a name="t43"></a><span class="section-number-4">1.5.3</span> 添加远端仓库 </h4>
+<div class="outline-text-4" id="text-1.5.3">
+<p><br>
+</p>
+<p>除了通过完整的URL来访问Git仓库外，还可以通过git remote add命令为仓库添加一个短名称。当你克隆了一个仓库以后，origin表示所克隆的原始仓库。即使我们从零开始，这个名称也存在。</p>
+<p><br>
+</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Add ../remote-repository.git with the name origin
+</span>git remote add origin ../remote-repository.git 
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Again some changes
+</span><span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"I added a remote repo"</span> &gt; test02
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Commit
+</span>git commit -a -m <span style="color:#ffa07a">"This is a test for the new remote origin"</span>
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">If you do not label a repository it will push to origin
+</span>git push origin
+</pre>
+</div>
+</div>
+<div id="outline-container-1.5.4" class="outline-4">
+<h4 id="sec-1.5.4"><a name="t44"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.4"><a name="t45"></a><span class="section-number-4">1.5.4</span> 显示已有的远端仓库 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.5.4">
+<p>通过以下命令查看已经存在的远端仓库 </p>
+<pre class="example" name="code"># Show the existing defined remote repositories
+git remote
+</pre>
+</div>
+</div>
+<div id="outline-container-1.5.5" class="outline-4">
+<h4 id="sec-1.5.5"><a name="t46"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.5"><a name="t47"></a><span class="section-number-4">1.5.5</span> 克隆仓库 </h4>
+<div class="outline-text-4" id="text-1.5.5">
+<p>通过以下命令在新的目录下创建一个新的仓库 </p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch to home
+</span><span style="color:#b0c4de">cd</span> ~
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Make new directory
+</span>mkdir repo02
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch to new directory
+</span>
+<span style="color:#b0c4de">cd</span> ~/repo02
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Clone
+</span>git clone ../remote-repository.git .
+</pre>
+</div>
+</div>
+<div id="outline-container-1.5.6" class="outline-4">
+<h4 id="sec-1.5.6"><a name="t48"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.6"><a name="t49"></a><span class="section-number-4">1.5.6</span> 拉取（Pull）更改 </h4>
+<div class="outline-text-4" id="text-1.5.6">
+<p>通过拉取，可以从其他的仓库中获取最新的更改。在第二个仓库中，做一些更改，然后将更改推送到远端的仓库中。然后第一个仓库拉取这些更改</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch to home
+</span><span style="color:#b0c4de">cd</span> ~
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch to second directory
+</span><span style="color:#b0c4de">cd</span> ~/repo02
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Make changes
+</span><span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"A change"</span> &gt; test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Commit
+</span>git commit -a -m <span style="color:#ffa07a">"A change"</span>
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Push changes to remote repository
+</span><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Origin is automatically maintained as we cloned from this repository
+</span>git push origin
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Switch to the first repository and pull in the changes
+</span><span style="color:#b0c4de">cd</span> ~/repo01
+git pull ../remote-repository.git/
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Check the changes
+</span>less test01
+</pre>
+</div>
+</div>
+<div id="outline-container-1.5.7" class="outline-4">
+<h4 id="sec-1.5.7"><a name="t50"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.7"><a name="t51"></a><span class="section-number-4">1.5.7</span> 还原更改 </h4>
+<div class="outline-text-4" id="text-1.5.7">
+<p>如果在你的工作副本中，你创建了不想被提交的文件，你可以丢弃它。 </p>
+<pre class="example" name="code"># Create a new file with content
+touch test04
+echo "this is trash" &gt; test04
+
+# Make a dry-run to see what would happen
+# -n is the same as --dry-run 
+git clean -n
+
+# Now delete
+git clean -f
+
+你可以提取老版本的代码，通过提交的ID。git log命令可以查看提交ID 
+
+# Switch to home
+cd ~/repo01
+# Get the log
+git log
+
+# Copy one of the older commits and checkout the older revision via  译者注：checkout 后加commit id就是把commit的内容复制到index和工作副本中 
+git checkout commit_name
+</pre>
+<p><br>
+</p>
+<p>如果你还未把更改加入到索引中，你也可以直接还原所有的更改 </p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24">#</span><span style="color:#ff7f24">Some nonsense change
+</span><span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"nonsense change"</span> &gt; test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Not added to the staging index. Therefore we can 
+</span><span style="color:#ff7f24"># </span><span style="color:#ff7f24">just checkout the old version
+</span><span style="color:#ff7f24">#</span><span style="color:#ff7f24">译者注：checkout后如果没有commit id号，就是从index中拷贝数据到工作副本，不涉及commit部分的改变
+</span>git checkout test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Check the result
+</span>cat test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Another nonsense change
+</span><span style="color:#b0c4de">echo</span> <span style="color:#ffa07a">"another nonsense change"</span> &gt; test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">We add the file to the staging index
+</span>git add test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Restore the file in the staging index
+</span><span style="color:#ff7f24">#</span><span style="color:#ff7f24">译者注：复制HEAD所指commit的test01文件到index中
+</span>git reset HEAD test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Get the old version from the staging index
+</span><span style="color:#ff7f24">#</span><span style="color:#ff7f24">译者注：复制index中test01到工作副本中
+</span>git checkout test01
+<span style="color:#ff7f24">#</span><span style="color:#ff7f24">译者注，以上两条命令可以合并为git checkout HEAD test01
+</span>
+也可以通过revert命令进行还原操作 
+
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Revert a commit
+</span>git revert commit_name
+</pre>
+<p><br>
+</p>
+<p>即使你删除了一个未添加到索引和提交的文件，你也可以还原出这个文件</p>
+<pre class="src src-sh" name="code"><span style="color:#ff7f24"># </span><span style="color:#ff7f24">Delete a file
+</span>rm test01
+<span style="color:#ff7f24"># </span><span style="color:#ff7f24">Revert the deletion
+</span>git checkout test01
+</pre>
+<p><br>
+</p>
+<p>如果你已经添加一个文件到索引中，但是未提交。可以通过git resetfile 命令将这个文件从索引中删除 </p>
+<pre class="example" name="code">// Create a file
+touch incorrect.txt
+// Accidently add it to the index
+git add .
+// Remove it from the index
+git reset incorrect.txt
+// Delete the file
+rm incorrect.txt
+</pre>
+<p><br>
+</p>
+<p>如果你删除了文件夹且尚未提交，可以通过以下命令来恢复这个文件夹 。译者注：即使已经提交，也可以还原</p>
+<pre class="example" name="code">git checkout HEAD -- your_dir_to_restore
+</pre>
+<p><br>
+</p>
+<p>译者注：checkout和reset这两个命令的含义是不同的，可以参阅这篇文章<a href="http://marklodato.github.com/visual-git-guide/index-en.html">http://marklodato.github.com/visual-git-guide/index-en.html</a></p>
+</div>
+</div>
+<div id="outline-container-1.5.8" class="outline-4">
+<h4 id="sec-1.5.8"><a name="t52"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.5.8"><a name="t53"></a><span class="section-number-4">1.5.8</span> 标记 </h4>
+<div class="outline-text-4" id="text-1.5.8">
+<p>Git可以使用对历史记录中的任一版本进行标记。这样在后续的版本中就能轻松的找到。一般来说，被用来标记某个发行的版本。可以通过git tag命令列出所有的标记，通过如下命令来创建一个标记和恢复到一个标记</p>
+<pre class="example" name="code">git tag version1.6 -m 'version 1.6'      
+git checkout &lt;tag_name&gt;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-1.6" class="outline-3">
+<h3 id="sec-1.6"><a name="t54"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.6"><a name="t55"></a><span class="section-number-3">1.6</span> 分支、合并 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.6"></div>
+<div id="outline-container-1.6.1" class="outline-4">
+<h4 id="sec-1.6.1"><a name="t56"></a><span class="section-number-4">1.6.1</span> 分支 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.6.1">
+<p>通过分支，可以创造独立的代码副本。默认的分支叫master。Git消耗很少的资源就能创建分支。Git鼓励开发人员多使用分支</p>
+<p><br>
+</p>
+<p>下面的命令列出了所有的本地分支，当前所在的分支前带有*号</p>
+<pre class="example" name="code">git branch 
+</pre>
+<p><br>
+</p>
+<p>如果你还想看到远端仓库的分支，可以使用下面的命令</p>
+<pre class="example" name="code">git branch -a
+</pre>
+<p><br>
+</p>
+<p>可以通过下面的命令来创建一个新的分支</p>
+<pre class="example" name="code"># Syntax: git branch &lt;name&gt; &lt;hash&gt;
+# &lt;hash&gt; in the above is optional 
+# if not specified the last commit will be used
+# If specified the corresponding commit will be used
+git branch testing
+# Switch to your new branch
+git checkout testing
+# Some changes
+echo "Cool new feature in this branch" &gt; test01
+git commit -a -m "new feature"
+# Switch to the master branch
+git checkout master
+# Check that the content of test01 is the old one
+cat test01
+</pre>
+</div>
+</div>
+<div id="outline-container-1.6.2" class="outline-4">
+<h4 id="sec-1.6.2"><a name="t57"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.6.2"><a name="t58"></a><span class="section-number-4">1.6.2</span> 合并 </h4>
+<div class="outline-text-4" id="text-1.6.2">
+<p><br>
+</p>
+<p>通过Merge我们可以合并两个不同分支的结果。Merge通过所谓的三路合并来完成。分别来自两个分支的最新commit和两个分支的最新公共commit.可以通过如下的命令进行合并</p>
+<pre class="example" name="code"># Syntax: git merge &lt;branch-name&gt;
+git merge testing
+</pre>
+<p><br>
+</p>
+<p>一旦合并发生了冲突，Git会标志出来，开发人员需要手工的去解决这些冲突。解决冲突以后，就可以将文件添加到索引中，然后提交更改</p>
+</div>
+</div>
+<div id="outline-container-1.6.3" class="outline-4">
+<h4 id="sec-1.6.3"><a name="t59"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.6.3"><a name="t60"></a><span class="section-number-4">1.6.3</span> 删除分支 </h4>
+<div class="outline-text-4" id="text-1.6.3">
+<p><br>
+</p>
+<p>删除分支的命令如下： </p>
+<pre class="example" name="code">#Delete branch testing
+git branch -d testing
+# Check if branch has been deleted
+git branch
+</pre>
+</div>
+</div>
+<div id="outline-container-1.6.4" class="outline-4">
+<h4 id="sec-1.6.4"><a name="t61"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.6.4"><a name="t62"></a><span class="section-number-4">1.6.4</span> 推送（push）一个分支到远端仓库 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.6.4">
+<p>默认的，Git只会推送匹配的分支的远端仓库。这意味在使用git push命令默认推送你的分支之前，需要手工的推送一次这个分支。</p>
+<pre class="example" name="code"># Push testing branch to remote repository
+git push origin testing
+
+# Switch to the testing branch
+git checkout testing
+
+# Some changes
+echo "News for you" &gt; test01
+git commit -a -m "new feature in branch"
+
+# Push all including branch
+git push
+</pre>
+<p>通过这种方式，你可以确定哪些分支对于其他仓库是可见的，而哪些只是本地的分支</p>
+</div>
+</div>
+</div>
+<div id="outline-container-1.7" class="outline-3">
+<h3 id="sec-1.7"><a name="t63"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.7"><a name="t64"></a><span class="section-number-3">1.7</span> 解决合并冲突 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.7">
+<p>如果两个不同的开发人员对同一个文件进行了修改，那么合并冲突就会发生。而Git没有智能到自动解决合并两个修改。</p>
+<p><br>
+</p>
+<p>在这一节中，我们会首先制造一个合并冲突，然后解决它，并应用到Git仓库中。</p>
+<p><br>
+</p>
+<p>下面会产生一个合并冲突 </p>
+<p><br>
+</p>
+<pre class="example" name="code"># Switch to the first directory
+cd ~/repo01
+# Make changes
+touch mergeconflict.txt
+echo "Change in the first repository" &gt; mergeconflict.txt
+# Stage and commit
+git add . &amp;&amp; git commit -a -m "Will create merge conflict 1"
+
+# Switch to the second directory
+cd ~/repo02
+# Make changes
+touch mergeconflict.txt
+echo "Change in the second repository" &gt; mergeconflict.txt
+# Stage and commit
+git add . &amp;&amp; git commit -a -m "Will create merge conflict 2"
+# Push to the master repository
+git push
+
+# Now try to push from the first directory
+# Switch to the first directory
+cd ~/repo01
+# Try to push --&gt; you will get an error message
+git push
+# Get the changes
+git pull origin master
+</pre>
+<p><br>
+</p>
+<p>Git将冲突放在收到影响的文件中，文件内容如下： </p>
+<pre class="example" name="code">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Change in the first repository
+=======
+Change in the second repository
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; b29196692f5ebfd10d8a9ca1911c8b08127c85f8
+</pre>
+<p><br>
+</p>
+<p>上面部分是你的本地仓库，下面部分是远端仓库。现在编辑这个文件，然后commit更改。另外的，你可以使用git mergetool命令</p>
+<pre class="example" name="code"># Either edit the file manually or use 
+git mergetool
+# You will be prompted to select which merge tool you want to use
+# For example on Ubuntu you can use the tool "meld"
+# After  merging the changes manually, commit them
+git commit -m "merged changes"
+</pre>
+</div>
+</div>
+<div id="outline-container-1.8" class="outline-3">
+<h3 id="sec-1.8"><a name="t65"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.8"><a name="t66"></a><span class="section-number-3">1.8</span> 变基（Rebase） </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.8"></div>
+<div id="outline-container-1.8.1" class="outline-4">
+<h4 id="sec-1.8.1"><a name="t67"></a><span class="section-number-4">1.8.1</span> 在同一分支中应用Rebase Commit</h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.8.1">
+<p>通过rebase命令可以合并多个commit为一个。这样用户push更改到远端仓库的时候就可以先修改commit历史</p>
+<p><br>
+</p>
+<p>接下来我们将创建多个commit，然后再将它们rebase成一个commit</p>
+<p><br>
+</p>
+<pre class="example" name="code"># Create a new file
+touch rebase.txt
+
+# Add it to git
+git add . &amp;&amp; git commit -m "rebase.txt added to index"
+
+# Do some silly changes and commit
+echo "content" &gt;&gt; rebase.txt
+git add . &amp;&amp; git commit -m "added content"
+echo " more content" &gt;&gt; rebase.txt
+git add . &amp;&amp; git commit -m "added more content"
+echo " more content" &gt;&gt; rebase.txt
+git add . &amp;&amp; git commit -m "added more content"
+echo " more content" &gt;&gt; rebase.txt
+git add . &amp;&amp; git commit -m "added more content"
+echo " more content" &gt;&gt; rebase.txt
+git add . &amp;&amp; git commit -m "added more content"
+echo " more content" &gt;&gt; rebase.txt
+git add . &amp;&amp; git commit -m "added more content"
+
+# Check the git log message
+git log
+</pre>
+<p>我们合并最后的七个commit。你可以通过如下的命令交互的完成</p>
+<pre class="example" name="code">git rebase -i HEAD~7
+</pre>
+<p>这个命令会打开编辑器让你修改commit的信息或者 squash/ fixup最后一个信息.Squash会合并commit信息而fixup会忽略commit信息（待理解）</p>
+</div>
+</div>
+<div id="outline-container-1.8.2" class="outline-4">
+<h4 id="sec-1.8.2"><a name="t68"></a><span class="section-number-4">1.8.2</span> Rebasing多个分支 </h4>
+<div class="outline-text-4" id="text-1.8.2">
+<p>你也可以对两个分支进行rebase操作。如下所述，merge命令合并两个分支的更改。rebase命令为一个分支的更改生成一个补丁，然后应用这个补丁到另一分支中</p>
+<p>使用merge和rebase，最后的源代码是一样的，但是使用rebase产生的commit历史更加的少，而且历史记录看上去更加的线性</p>
+<pre class="example" name="code"># Create new branch 
+git branch testing
+# Checkout the branch
+git checkout testing
+# Make some changes
+echo "This will be rebased to master" &gt; test01
+# Commit into testing branch
+git commit -a -m "New feature in branch"
+# Rebase the master
+git rebase master
+</pre>
+</div>
+</div>
+<div id="outline-container-1.8.3" class="outline-4">
+<h4 id="sec-1.8.3"><a name="t69"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.8.3"><a name="t70"></a><span class="section-number-4">1.8.3</span> Rebase最佳实践 </h4>
+<div class="outline-text-4" id="text-1.8.3">
+<p>在push更改到其他的Git仓库之前，我们需要仔细检查本地分支的commit历史</p>
+<p><br>
+</p>
+<p>在Git中，你可以使用本地的commit。开发人员可以利用这个功能方便的回滚本地的开发历史。但是在push之前，需要观察你的本地分支历史，是否其中有些commit历史对其他用户来说是无关的</p>
+<p><br>
+</p>
+<p>如果所有的commit历史都跟同一个功能有关，很多情况下，你需要rebase这些commit历史为一个commit历史。</p>
+<p><br>
+</p>
+<p>交互性的rebase主要就是做重写commit历史的任务。这样做是安全的，因为commit还没有被push到其它的仓库。这意味着commit历史只有在被push之前被修改。</p>
+<p><br>
+</p>
+<p>如果你修改然后push了一个已经在目标仓库中存在的commit历史，这看起来就像是你实现了一些别人已经实现的功能</p>
+</div>
+</div>
+<div id="outline-container-1.8.4" class="outline-4">
+<h4 id="sec-1.8.4"><a name="t71"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.8.4"><a name="t72"></a><span class="section-number-4">1.8.4</span> 创建和应用补丁 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.8.4">
+<p>一个补丁指的是一个包含对源代码进行修改的文本文件。你可以将这个文件发送给某人，然后他就可以应用这个补丁到他的本地仓库。</p>
+<p><br>
+</p>
+<p>下面会创建一个分支，对这个分支所一些修改，然后创建一个补丁，并应用这个补丁到master分支 </p>
+<p><br>
+</p>
+<pre class="example" name="code"># Create a new branch
+git branch mybranch
+# Use this new branch
+git checkout mybranch
+# Make some changes
+touch test05
+# Change some content in an existing file
+echo "New content for test01" &gt;test01
+# Commit this to the branch
+git add .
+git commit -a -m "First commit in the branch"
+
+# Create a patch --&gt; git format-patch master
+git format-patch origin/master
+# This created patch 0001-First-commit-in-the-branch.patch
+
+# Switch to the master
+git checkout master
+
+# Apply the patch
+git apply 0001-First-commit-in-the-branch.patch
+# Do your normal commit in the master 
+git add .
+git commit -a -m "Applied patch"
+
+# Delete the patch 
+rm 0001-First-commit-in-the-branch.patch
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-1.9" class="outline-3">
+<h3 id="sec-1.9"><a name="t73"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.9"><a name="t74"></a><span class="section-number-3">1.9</span> 定义同名命令 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.9">
+<p>Git允许你设定你自己的Git命令。你可以给你自己常用的命令起一个缩写命令，或者合并几条命令道一个命令上来。</p>
+<p><br>
+</p>
+<p>下面的例子中，定义了git add-commit 命令，这个命令合并了git add . -A 和git commit -m 命令。定义这个命令后，就可以使用git add-commit -m"message" 了.</p>
+<p><br>
+</p>
+<pre class="example" name="code">git config --global alias.add-commit '!git add . -A &amp;&amp; git commit'
+</pre>
+<p>但是非常不幸，截止写这篇文章之前，定义同名命令在msysGit中还没有支持。同名命令不能以！开始。</p>
+</div>
+</div>
+<div id="outline-container-1.10" class="outline-3">
+<h3 id="sec-1.10"><a name="t75"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.10"><a name="t76"></a><span class="section-number-3">1.10</span> 放弃跟踪文件 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.10">
+<p>有时候，你不希望某些文件或者文件夹被包含在Git仓库中。但是如果你把它们加到.gitignore文件中以后，Git会停止跟踪这个文件。但是它不会将这个文件从仓库中删除。这导致了文件或者文件夹的最后一个版本还是存在于仓库中。为了取消跟踪这些文件或者文件夹，你可以使用如下的命令</p>
+<p><br>
+</p>
+<pre class="example" name="code"># Remove directory .metadata from git repo
+git rm -r --cached .metadata
+# Remove file test.txt from repo
+git rm --cached test.txt
+</pre>
+<p>这样做不会将这些文件从commit历史中去掉。如果你想将这些文件从commit历史中去掉，可以参考git filter-branch命令</p>
+</div>
+</div>
+<div id="outline-container-1.11" class="outline-3">
+<h3 id="sec-1.11"><a name="t77"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.11"><a name="t78"></a><span class="section-number-3">1.11</span> 其他有用的命令 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.11">
+<p>下面列出了在日常工作中非常有用的Git命令</p>
+<p><br>
+</p>
+<p><code>有用的Git命令</code></p>
+<p><code><br>
+</code></p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption><colgroup><col align="left"><col align="left"></colgroup>
+<thead>
+<tr>
+<th scope="col">命令</th>
+<th scope="col">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git blame filename</td>
+<td>谁创建了或者是修改了这个文件</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>git checkout -b mybranch</td>
+<td>以上上个commit信息为起点，创建一条</td>
+</tr>
+<tr>
+<td>master~1</td>
+<td>新的分支</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-1.12" class="outline-3">
+<h3 id="sec-1.12"><a name="t79"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.12"><a name="t80"></a><span class="section-number-3">1.12</span> 安装Git服务 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.12">
+<p>如上所述，我们的操作不需要Git服务。我可以只使用文件系统或者是Git仓库的提供者，像Github或Bitbucket。但是，有时候，拥有一个自己的服务是比较方便的，在ubuntu下安装一个服务相对来说是比较容易的</p>
+<p><br>
+</p>
+<p>确定你已经安装了ssh</p>
+<pre class="example" name="code">apt-get install ssh
+</pre>
+<p><br>
+</p>
+<p>如果你还没有安装Git服务，安装它 </p>
+<pre class="example" name="code">sudo apt-get install git-core
+</pre>
+<p><br>
+</p>
+<p>添加一个名为git的用户</p>
+<pre class="example" name="code">sudo adduser git
+</pre>
+<p><br>
+</p>
+<p>然后使用git用户进行登陆，创建一个空的仓库</p>
+<pre class="example" name="code"># Login to server
+# to test use localhost
+ssh git@IP_ADDRESS_OF_SERVER
+
+# Create repository
+git init --bare example.git
+</pre>
+<p><br>
+</p>
+<p>现在你就可以向远端的仓库提交变更了</p>
+<pre class="example" name="code">mkdir gitexample
+cd gitexample
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@IP_ADDRESS_OF_SERVER:example.git
+git push origin master
+</pre>
+</div>
+</div>
+<div id="outline-container-1.13" class="outline-3">
+<h3 id="sec-1.13"><a name="t81"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.13"><a name="t82"></a><span class="section-number-3">1.13</span> 在线的远端仓库 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.13"></div>
+<div id="outline-container-1.13.1" class="outline-4">
+<h4 id="sec-1.13.1"><a name="t83"></a><span class="section-number-4">1.13.1</span> 克隆远端仓库 </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.13.1">
+<p>Git支持远端的操作。Git支持多种的传输类型，Git自带的协议就叫做git。下面的的命令通过git协议从克隆一个仓库</p>
+<pre class="example" name="code">git clone git@github.com:vogella/gitbook.git
+</pre>
+<p><br>
+</p>
+<p>同样的，你可以通过http协议来克隆仓库 </p>
+<pre class="example" name="code"># The following will clone via HTTP 
+git clone http://vogella@github.com/vogella/gitbook.git
+</pre>
+</div>
+</div>
+<div id="outline-container-1.13.2" class="outline-4">
+<h4 id="sec-1.13.2"><a name="t84"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.13.2"><a name="t85"></a><span class="section-number-4">1.13.2</span> 添加远端仓库 </h4>
+<div class="outline-text-4" id="text-1.13.2">
+<p>如果你克隆了一个远端仓库，那么原先的仓库就叫做origin</p>
+<p>你可以push修改到origin中，通过 git push origin 命令. 当然，push到一个远端的仓库需要对仓库的写权限</p>
+<p>你可以通过git remote add name gitrepo 命令添加多个仓库。例如，你可以通过http协议再次添加之前clone过来的仓库:</p>
+<pre class="example" name="code">// Add the https protocol 
+git remote add githttp https://vogella@github.com/vogella/gitbook.git
+</pre>
+</div>
+</div>
+<div id="outline-container-1.13.3" class="outline-4">
+<h4 id="sec-1.13.3"><a name="t86"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.13.3"><a name="t87"></a><span class="section-number-4">1.13.3</span> 通过http和代理服务器进行远端操作</h4>
+<div class="outline-text-4" id="text-1.13.3">
+<p>如果你的防火墙屏蔽了出http以外的所有协议，那么使用http协议来获取仓库是非常好的方法。.</p>
+<p>Git同样支持通过代理服务器使用http协议。下面的Git命令会展示这一点。你可以为所有的程序设置代理服务器或者只是为Git服务提供。</p>
+<p>下面的例子用到了环境变量</p>
+<pre class="example" name="code"># Linux
+export http_proxy=http://proxy:8080
+# On Windows
+# Set http_proxy=http://proxy:8080 
+git clone http://dev.eclipse.org/git/org.eclipse.jface/org.eclipse.jface.snippets.git
+# Push back to the origin using http
+git push origin
+</pre>
+<p><br>
+</p>
+<p>下面的例子只是用到了Git的配置</p>
+<pre class="example" name="code">// Set proxy for git globally
+ git config --global http.proxy http://proxy:8080
+// To check the proxy settings
+git config --get http.proxy
+// Just in case you need to you can also revoke the proxy settings
+git config --global --unset http.proxy
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-1.14" class="outline-3">
+<h3 id="sec-1.14"><a name="t88"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.14"><a name="t89"></a><span class="section-number-3">1.14</span> Git服务提供商 </h3>
+<div class="outline-text-3" id="text-1.14">
+<p>除了假设自己的服务，你也可以使用Git服务提供商提供的服务。最流行的Git服务提供网站是GitHub和Bitbucket。它们都提供了有限制的免费服务</p>
+</div>
+<div id="outline-container-1.14.1" class="outline-4">
+<h4 id="sec-1.14.1"><a name="t90"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.14.1"><a name="t91"></a><span class="section-number-4">1.14.1</span> GitHub </h4>
+<div class="outline-text-4" id="text-1.14.1">
+<p>可以通过 <a href="https://github.com/">https://github.com/</a> 访问GitHub. GitHub上所有的公开仓库都是免费的。如果你想在上面使用私有的仓库，那么就需要付费给GitHub</p>
+<p><br>
+</p>
+<p>GitHub需要你创建ssh的公钥私钥。生成一份Ubuntu的公钥私钥可以访问 sshkey creation in Ubuntu ，Windows环境可以访问msysgit ssh key generation.</p>
+<p><br>
+</p>
+<p>在GitHub上创建一个账户和一个仓库以后。你会收到如何将你的项目上传到GitHUb的指南，其中的命令大致如下：</p>
+<p><br>
+</p>
+<pre class="example" name="code">Global setup:
+ Set up git
+  git config --global user.name "Your Name"
+  git config --global user.email your.email@gmail.com
+      
+Next steps:
+  mkdir gitbook 
+  cd gitbook
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:vogella/gitbook.git
+  git push -u origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:vogella/gitbook.git
+  git push -u origin master
+</pre>
+</div>
+</div>
+<div id="outline-container-1.14.2" class="outline-4">
+<h4 id="sec-1.14.2"><a name="t92"></a><span class="section-number-4"><br>
+</span></h4>
+<h4 id="sec-1.14.2"><a name="t93"></a><span class="section-number-4">1.14.2</span> Bitbucket </h4>
+<div><br>
+</div>
+<div class="outline-text-4" id="text-1.14.2">
+<p>可以通过 <a href="https://bitbucket.org/">https://bitbucket.org/</a> 访问Bitbucket. Bitbucket 提供了无限制了公共仓库和只能有五个人访问的私有仓库。如果你需要超过五个人访问私有仓库，就需要付费给Bitbucket</p>
+</div>
+</div>
+</div>
+<div id="outline-container-1.15" class="outline-3">
+<h3 id="sec-1.15"><a name="t94"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.15"><a name="t95"></a><span class="section-number-3">1.15</span> Git的图形接口 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.15">
+<p>这个教程主要说明Git命令行的使用。完成了这个教程以后，你可能想要找到一个Git的图形工具</p>
+<p><br>
+</p>
+<p>Git提供了两个图形工具。 gitk能够展示仓库的历史信息、git gui 让你可以通过编辑器来完成Git操作</p>
+<p><br>
+</p>
+<p>Eclipse EGit 项目提供了Git与Eclipse的集成，在最新的Eclipse版本中可以找到</p>
+<p><br>
+</p>
+</div>
+</div>
+<div id="outline-container-1.16" class="outline-3">
+<h3 id="sec-1.16"><a name="t96"></a><span class="section-number-3">1.16</span> Kindle版本教程 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.16">
+<p>这个教程提供了Kindle版本</p>
+<p>Kindle Edition </p>
+</div>
+</div>
+<div id="outline-container-1.17" class="outline-3">
+<h3 id="sec-1.17"><a name="t97"></a><span class="section-number-3"><br>
+</span></h3>
+<h3 id="sec-1.17"><a name="t98"></a><span class="section-number-3">1.17</span> 问题与讨论 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.17">
+<p>在提出问题之前，请先查看 vogella FAQ. 如果你有任何的问题或者是从文章中找到错误，那么可以使用www.vogella.com Google Group. 我自己写了一个简短的列表 how to create good questions 可能会对你有用.</p>
+<p><br>
+</p>
+</div>
+</div>
+<div id="outline-container-1.18" class="outline-3">
+<h3 id="sec-1.18"><a name="t99"></a><span class="section-number-3">1.18</span> 链接和文章 </h3>
+<div><br>
+</div>
+<div class="outline-text-3" id="text-1.18">
+<p>Git homepage</p>
+<p>EGit - Teamprovider for Eclipse</p>
+<p>Video with Linus Torwalds on Git</p>
+<p>Progit book - Free Git book</p>
+<p>Video casts about Git</p>
+<p><a href="http://code.google.com/p/msysgit/">http://code.google.com/p/msysgit/</a> Git on Windows</p>
+<p><a href="http://github.com/guides/git-cheat-sheet">http://github.com/guides/git-cheat-sheet</a> Git Cheat Sheets</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble">
+<p class="author">Author: hic<a href="mailto:lishuo.os.ds@gmail.com">&lt;lishuo.os.ds@gmail.com&gt;</a></p>
+<p class="date">Date: 2012-08-26 日</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad bdshare-button-style0-16" style="float: right;" data-mod="popu_172" data-bd-bind="1464073288913">
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important" target="_blank"></a>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间" style="background-position:0 -52px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博" style="background-position:0 -104px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博" style="background-position:0 -260px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" class="bds_renren" data-cmd="renren" title="分享到人人网" style="background-position:0 -208px !important" target="_blank"></a>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" class="bds_weixin" data-cmd="weixin" title="分享到微信" style="background-position:0 -1612px !important" target="_blank"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   <link rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/blog_detail.css">
+
+    
+<!--172.16.140.12-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/bds_s_v2.js"></script>
+
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+ 
+
+        <div id="digg" articleid="8078475">
+            <dl id="btnDigg" class="digg digg_disable" onclick="btndigga();">
+               
+                 <dt>顶</dt>
+                <dd>0</dd>
+            </dl>
+           
+              
+            <dl id="btnBury" class="digg digg_disable" onclick="btnburya();">
+              
+                  <dt>踩</dt>
+                <dd>0</dd>               
+            </dl>
+            
+        </div>
+     <div class="tracking-ad" data-mod="popu_222"><a href="javascript:void(0);" target="_blank">&nbsp;</a>   </div>
+    <div class="tracking-ad" data-mod="popu_223"> <a href="javascript:void(0);" target="_blank">&nbsp;</a></div>
+    <script type="text/javascript">
+                function btndigga() {
+                    $(".tracking-ad[data-mod='popu_222'] a").click();
+                }
+                function btnburya() {
+                    $(".tracking-ad[data-mod='popu_223'] a").click();
+                }
+            </script>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_shangyipian&#39;]);location.href=&#39;/lishuo_os_ds/article/details/8078461&#39;;">上一篇</span><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078461" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_shangyipian&#39;])">linux下Bochs模拟占用CPU过高问题解决</a></li>
+                <li class="next_article"><span onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_xiayipian&#39;]);location.href=&#39;/lishuo_os_ds/article/details/8078493&#39;;">下一篇</span><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078493" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_xiayipian&#39;])">GitHub安装SSH公钥</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+        <div class="similar_article" style="">
+                <h4>我的同类文章</h4>
+                <div class="similar_c" style="margin:20px 0px 0px 0px">
+                    <div class="similar_c_t">
+                                <label class="similar_cur">
+                                    <span style="cursor:pointer" onclick="GetCategoryArticles(&#39;1256689&#39;,&#39;lishuo_OS_DS&#39;,&#39;foot&#39;,&#39;8078475&#39;);">Git<em>（4）</em></span>
+                                </label>
+                    </div>
+                   
+                    <div class="similar_wrap tracking-ad" data-mod="popu_141" style="max-height:195px;">
+                        <a href="http://blog.csdn.net/" style="display:none" target="_blank">http://blog.csdn.net</a>
+                        <ul class="similar_list fl"><li><em>•</em><a href="http://blog.csdn.net/lishuo_OS_DS/article/details/8078504" id="foot_aritcle_8078504undefined7692335289179415" target="_blank" title="Git安装">Git安装</a><span>2012-10-16</span><label><i>阅读</i><b>501</b></label></li> <li><em>•</em><a href="http://blog.csdn.net/lishuo_OS_DS/article/details/8078497" id="foot_aritcle_8078497undefined7578211986251517" target="_blank" title="GitHub常用命令">GitHub常用命令</a><span>2012-10-16</span><label><i>阅读</i><b>589</b></label></li> </ul>
+
+                        <ul class="similar_list fr"><li><em>•</em><a href="http://blog.csdn.net/lishuo_OS_DS/article/details/8078502" id="foot_aritcle_8078502undefined0623450670668817" target="_blank" title="Git 存储过程探究">Git 存储过程探究</a><span>2012-10-16</span><label><i>阅读</i><b>469</b></label></li> <li><em>•</em><a href="http://blog.csdn.net/lishuo_OS_DS/article/details/8078493" id="foot_aritcle_8078493undefined009114374324449503" target="_blank" title="GitHub安装SSH公钥">GitHub安装SSH公钥</a><span>2012-10-16</span><label><i>阅读</i><b>1023</b></label></li> </ul>
+                    </div>
+                </div>
+            </div>    
+    <script type="text/javascript">
+        $(function () {
+            GetCategoryArticles('1256689', 'lishuo_OS_DS','foot','8078475');
+        });
+    </script>
+      
+</div>
+<div id="suggest">
+
+</div>
+         <script language="javascript" type="text/javascript">     
+             $(function(){
+                 $.get("/lishuo_OS_DS/svc/GetSuggestContent/8078475",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+
+<style>
+.blog-ass-articl dd {
+color: #369;
+width: 99%; /*修改行*/
+float: left;
+overflow: hidden;
+font: normal normal 12px/23px "SimSun";
+height: 23px;
+margin: 0;
+padding: 0 0 0 10px;
+margin-right: 30px;
+background: url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;
+}
+</style>
+
+ <link rel="stylesheet" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/replace.css">
+
+<div id="relate" data-mod="popu_218" class="tracking-ad" style="display: none;">
+        <div class="relate_t">
+            <h3><span>参考知识库</span></h3>
+        </div>
+        <div class="relate_c">
+        </div>
+</div>
+ 
+
+<dl class="blog-ass-articl" id="res-relatived"> 
+    <div class="embody embody_b" id="libkeyparent" style="display:none">
+            <span class="embody_t">更多资料请参考：</span>
+            <div class="embody_c" id="libkey"></div>
+    </div>
+
+
+     <dt><span>猜你在找</span></dt>    
+
+
+   
+
+
+    <div id="adCollege" style="width: 42%;float: left;"> 
+        <script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/job_reco.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+            csdn.position.showEdu({
+                sourceType: "blog",
+                searchType: "detail",
+                searchKey: "8078475",
+                username: "",
+                recordcount: "5",
+                containerId: "adCollege" //容器DIV的id。 
+            });
+        </script> 
+    <div class="tracking-ad" data-mod="popu_84"><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/1223" title="Git入门基础" strategy="v3:content" target="_blank">Git入门基础</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/214" title=" 拥抱开源： Github使用指南" strategy="v3:content" target="_blank"> 拥抱开源： Github使用指南</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/1392" title="Git精简教程" strategy="v3:content" target="_blank">Git精简教程</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/1380" title="Swift不深入只浅出入门教程" strategy="v3:content" target="_blank">Swift不深入只浅出入门教程</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;"><a href="http://edu.csdn.net/course/detail/282" title="微信公众平台开发入门" strategy="v3:hot" target="_blank">微信公众平台开发入门</a></dd></div></div>  
+
+    
+     <div id="res" data-mod="popu_36" class="tracking-ad" style="width: 42%; float: left; margin-right: 30px; display: block;"><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/u011371289/article/details/17882059" title="github版本库使用详细教程命令行及图形界面版" strategy="SearchAlgorithm" target="_blank">github版本库使用详细教程命令行及图形界面版</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/top_roboo/article/details/44464473" title="Github上传代码菜鸟超详细教程转" strategy="SearchAlgorithm" target="_blank">Github上传代码菜鸟超详细教程转</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/lee244868149/article/details/39315469" title="GitHub详细教程" strategy="SearchAlgorithm" target="_blank">GitHub详细教程</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/xuehaiwuya_1/article/details/38406267" title="GitHub详细教程" strategy="SearchAlgorithm" target="_blank">GitHub详细教程</a></dd><dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="http://blog.csdn.net/songjinbin/article/details/23611195" title="GitHub详细教程" strategy="SearchAlgorithm" target="_blank">GitHub详细教程</a></dd></div>
+   
+</dl>
+
+
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function () {
+            var searchtitletags = 'GitHub详细教程' + ',' + $("#tags").html();
+            searchService({
+                index: 'blog',
+                query: searchtitletags,
+                from: 5,
+                size: 5,
+                appendTo: '#res',
+                url: 'recommend',
+                his: 2,
+                client: "blog_cf_enhance",
+                tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+            });
+        }, 500);
+    });    
+
+ </script>  
+
+    <div id="ad_cen">        
+<!-- 广告位开始 -->
+<div class="J_adv" data-view="true" data-mod="ad_popu_71" data-mtp="36" data-order="40" data-con="ad_content_216" style="width: 728px; height: 90px;"><!-- 广告占位容器 --><div id="cpro_u1607657"><iframe id="iframeu1607657_0" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/fcnm.html" width="728" height="90" align="center,center" vspace="0" hspace="0" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" style="border:0; vertical-align:bottom;margin:0;" allowtransparency="true"></iframe></div><!-- 投放代码 --><script type="text/javascript">(window['cproStyleApi'] = window['cproStyleApi'] ||{})['u1607657']={at:'3',rsi0:'728',rsi1:'90',pat:'6',tn:'baiduCustNativeAD',rss1:'#FFFFFF',conBW:'1',adp:'1',ptt:'0',titFF:'%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91',titFS:'',rss2:'#000000',titSU:'0',ptbg:'90',piw:'0',pih:'0',ptp:'0'};/*服务器频道首页置顶Banner960*90，创建于2014-7-3*/(window.cproArray = window.cproArray || []).push({id:'u1607657'});  </script>  <script src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/c.js" type="text/javascript"></script></div>
+<!-- 广告位结束 -->    </div>  
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list"><dl class="comment_item comment_topic" id="comment_item_4936813"><dt class="comment_head" floor="5">5楼 <span class="user"><a class="username" href="http://blog.csdn.net/TA_tan" target="_blank">JayTan_1992</a> <span class="ptime">2015-04-14 11:19发表</span>  <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="4936813" username="TA_tan"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/TA_tan" target="_blank"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/3_ta_tan.jpg" width="40" height="40"></a></dd><dd class="comment_body">学习ing</dd></dl><dl class="comment_item comment_topic" id="comment_item_3836205"><dt class="comment_head" floor="4">4楼 <span class="user"><a class="username" href="http://blog.csdn.net/Assassin_Me" target="_blank">予怀</a> <span class="ptime">2014-05-13 15:09发表</span>  <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="3836205" username="Assassin_Me"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/Assassin_Me" target="_blank"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/3_assassin_me.jpg" width="40" height="40"></a></dd><dd class="comment_body">配置章节不全啊，楼主</dd></dl><dl class="comment_item comment_topic" id="comment_item_3752049"><dt class="comment_head" floor="3">3楼 <span class="user"><a class="username" href="http://blog.csdn.net/MR_mac1" target="_blank">MR_mac1</a> <span class="ptime">2014-04-18 11:55发表</span>  <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="3752049" username="MR_mac1"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/MR_mac1" target="_blank"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/3_mr_mac1.jpg" width="40" height="40"></a></dd><dd class="comment_body">mark</dd></dl><dl class="comment_item comment_topic" id="comment_item_3592373"><dt class="comment_head" floor="2">2楼 <span class="user"><a class="username" href="http://blog.csdn.net/Jesse__Zhong" target="_blank">Jesse__Zhong</a> <span class="ptime">2014-03-15 20:28发表</span>  <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display:none;" commentid="3592373" username="Jesse__Zhong"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/Jesse__Zhong" target="_blank"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/3_jesse__zhong.jpg" width="40" height="40"></a></dd><dd class="comment_body">mark</dd></dl><dl class="comment_item comment_topic" id="comment_item_3569395"><dt class="comment_head" floor="1">1楼 <span class="user"><a class="username" href="http://blog.csdn.net/u010089395" target="_blank">hong_lucy</a> <span class="ptime">2014-03-11 09:44发表</span>  <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#reply" class="cmt_btn reply" title="回复">[回复]</a> <span class="comment_manage" style="display: none;" commentid="3569395" username="u010089395"> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#quote" class="cmt_btn quote" title="引用">[引用]</a> <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#report" class="cmt_btn report" title="举报">[举报]</a></span></span></dt><dd class="comment_userface"><a href="http://blog.csdn.net/u010089395" target="_blank"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/3_u010089395.jpg" width="40" height="40"></a></dd><dd class="comment_body">这文章很好 怎么装载呀</dd></dl><div class="clear"></div></div>
+    <div id="comment_bar" style="display: none;">
+    </div>
+    <div id="comment_form"><div class="guest_link">您还没有登录,请<a href="javascript:void(0);" onclick="javascript:loginbox();">[登录]</a>或<a href="http://passport.csdn.net/account/register?from=http%3A%2F%2Fblog.csdn.net%2Flishuo_os_ds%2Farticle%2Fdetails%2F8078475%23sec-1.1.1">[注册]</a></div></div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '8078475';
+    var commentscount = 5;
+    var islock = false
+</script>
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/comment.js"></script>
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top" style="bottom:60px;">
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/blog-icon-reply.png" alt="快速回复">
+        </a>    
+
+    <a id="d-top-a" class="btn btn-top backtop" style="display: none;" title="返回顶部" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_huidaodingbu&#39;])">         
+         <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+<div class="tag_list" style="">
+
+    <h5>
+        <a href="http://www.csdn.net/tag/" target="_blank">核心技术类目</a></h5>
+    <div class="classify">
+<a title="全部主题" href="http://www.csdn.net/tag" target="_blank" onclick="LogClickCount(this,336);">全部主题</a>
+<a title="Hadoop" href="http://g.csdn.net/5272865" target="_blank" onclick="LogClickCount(this,336);">Hadoop</a>
+<a title="AWS" href="http://g.csdn.net/5272866" target="_blank" onclick="LogClickCount(this,336);">AWS</a>
+<a title="移动游戏" href="http://g.csdn.net/5272870" target="_blank" onclick="LogClickCount(this,336);">移动游戏</a>
+<a title="Java" href="http://g.csdn.net/5272871" target="_blank" onclick="LogClickCount(this,336);">Java</a>
+<a title="Android" href="http://g.csdn.net/5272872" target="_blank" onclick="LogClickCount(this,336);">Android</a>
+<a title="iOS" href="http://g.csdn.net/5272873" target="_blank" onclick="LogClickCount(this,336);">iOS</a>
+<a title="Swift" href="http://g.csdn.net/5272868" target="_blank" onclick="LogClickCount(this,336);">Swift</a>
+<a title="智能硬件" href="http://g.csdn.net/5272869" target="_blank" onclick="LogClickCount(this,336);">智能硬件</a>
+<a title="Docker" href="http://g.csdn.net/5272867" target="_blank" onclick="LogClickCount(this,336);">Docker</a>
+<a title="OpenStack" href="http://g.csdn.net/5272925" target="_blank" onclick="LogClickCount(this,336);">OpenStack</a>
+<a title="VPN" href="http://www.csdn.net/tag/vpn" target="_blank" onclick="LogClickCount(this,336);">VPN</a>
+<a title="Spark" href="http://g.csdn.net/5272924" target="_blank" onclick="LogClickCount(this,336);">Spark</a>
+<a title="ERP" href="http://www.csdn.net/tag/erp" target="_blank" onclick="LogClickCount(this,336);">ERP</a>
+<a title="IE10" href="http://www.csdn.net/tag/ie10" target="_blank" onclick="LogClickCount(this,336);">IE10</a>
+<a title="Eclipse" href="http://www.csdn.net/tag/eclipse" target="_blank" onclick="LogClickCount(this,336);">Eclipse</a>
+<a title="CRM" href="http://www.csdn.net/tag/crm" target="_blank" onclick="LogClickCount(this,336);">CRM</a>
+<a title="JavaScript" href="http://www.csdn.net/tag/javascript" target="_blank" onclick="LogClickCount(this,336);">JavaScript</a>
+<a title="数据库" href="http://www.csdn.net/tag/%E6%95%B0%E6%8D%AE%E5%BA%93" target="_blank" onclick="LogClickCount(this,336);">数据库</a>
+<a title="Ubuntu" href="http://www.csdn.net/tag/ubuntu" target="_blank" onclick="LogClickCount(this,336);">Ubuntu</a>
+<a title="NFC" href="http://www.csdn.net/tag/nfc" target="_blank" onclick="LogClickCount(this,336);">NFC</a>
+<a title="WAP" href="http://www.csdn.net/tag/wap" target="_blank" onclick="LogClickCount(this,336);">WAP</a>
+<a title="jQuery" href="http://www.csdn.net/tag/jquery" target="_blank" onclick="LogClickCount(this,336);">jQuery</a>
+<a title="BI" href="http://www.csdn.net/tag/bi" target="_blank" onclick="LogClickCount(this,336);">BI</a>
+<a title="HTML5" href="http://www.csdn.net/tag/html5" target="_blank" onclick="LogClickCount(this,336);">HTML5</a>
+<a title="Spring" href="http://www.csdn.net/tag/spring" target="_blank" onclick="LogClickCount(this,336);">Spring</a>
+<a title="Apache" href="http://www.csdn.net/tag/apache" target="_blank" onclick="LogClickCount(this,336);">Apache</a>
+<a title=".NET" href="http://www.csdn.net/tag/.net" target="_blank" onclick="LogClickCount(this,336);">.NET</a>
+<a title="API" href="http://www.csdn.net/tag/api" target="_blank" onclick="LogClickCount(this,336);">API</a>
+<a title="HTML" href="http://www.csdn.net/tag/html" target="_blank" onclick="LogClickCount(this,336);">HTML</a>
+<a title="SDK" href="http://www.csdn.net/tag/sdk" target="_blank" onclick="LogClickCount(this,336);">SDK</a>
+<a title="IIS" href="http://www.csdn.net/tag/iis" target="_blank" onclick="LogClickCount(this,336);">IIS</a>
+<a title="Fedora" href="http://www.csdn.net/tag/fedora" target="_blank" onclick="LogClickCount(this,336);">Fedora</a>
+<a title="XML" href="http://www.csdn.net/tag/xml" target="_blank" onclick="LogClickCount(this,336);">XML</a>
+<a title="LBS" href="http://www.csdn.net/tag/lbs" target="_blank" onclick="LogClickCount(this,336);">LBS</a>
+<a title="Unity" href="http://www.csdn.net/tag/unity" target="_blank" onclick="LogClickCount(this,336);">Unity</a>
+<a title="Splashtop" href="http://www.csdn.net/tag/splashtop" target="_blank" onclick="LogClickCount(this,336);">Splashtop</a>
+<a title="UML" href="http://www.csdn.net/tag/uml" target="_blank" onclick="LogClickCount(this,336);">UML</a>
+<a title="components" href="http://www.csdn.net/tag/components" target="_blank" onclick="LogClickCount(this,336);">components</a>
+<a title="Windows Mobile" href="http://www.csdn.net/tag/windowsmobile" target="_blank" onclick="LogClickCount(this,336);">Windows Mobile</a>
+<a title="Rails" href="http://www.csdn.net/tag/rails" target="_blank" onclick="LogClickCount(this,336);">Rails</a>
+<a title="QEMU" href="http://www.csdn.net/tag/qemu" target="_blank" onclick="LogClickCount(this,336);">QEMU</a>
+<a title="KDE" href="http://www.csdn.net/tag/kde" target="_blank" onclick="LogClickCount(this,336);">KDE</a>
+<a title="Cassandra" href="http://www.csdn.net/tag/cassandra" target="_blank" onclick="LogClickCount(this,336);">Cassandra</a>
+<a title="CloudStack" href="http://www.csdn.net/tag/cloudstack" target="_blank" onclick="LogClickCount(this,336);">CloudStack</a>
+<a title="FTC" href="http://www.csdn.net/tag/ftc" target="_blank" onclick="LogClickCount(this,336);">FTC</a>
+<a title="coremail" href="http://www.csdn.net/tag/coremail" target="_blank" onclick="LogClickCount(this,336);">coremail</a>
+<a title="OPhone " href="http://www.csdn.net/tag/ophone" target="_blank" onclick="LogClickCount(this,336);">OPhone </a>
+<a title="CouchBase" href="http://www.csdn.net/tag/couchbase" target="_blank" onclick="LogClickCount(this,336);">CouchBase</a>
+<a title="云计算" href="http://www.csdn.net/tag/%E4%BA%91%E8%AE%A1%E7%AE%97" target="_blank" onclick="LogClickCount(this,336);">云计算</a>
+<a title="iOS6" href="http://www.csdn.net/tag/iOS6" target="_blank" onclick="LogClickCount(this,336);">iOS6</a>
+<a title="Rackspace " href="http://www.csdn.net/tag/rackspace" target="_blank" onclick="LogClickCount(this,336);">Rackspace </a>
+<a title="Web App" href="http://www.csdn.net/tag/webapp" target="_blank" onclick="LogClickCount(this,336);">Web App</a>
+<a title="SpringSide" href="http://www.csdn.net/tag/springside" target="_blank" onclick="LogClickCount(this,336);">SpringSide</a>
+<a title="Maemo" href="http://www.csdn.net/tag/maemo" target="_blank" onclick="LogClickCount(this,336);">Maemo</a>
+<a title="Compuware" href="http://www.csdn.net/tag/compuware" target="_blank" onclick="LogClickCount(this,336);">Compuware</a>
+<a title="大数据" href="http://www.csdn.net/tag/%E5%A4%A7%E6%95%B0%E6%8D%AE" target="_blank" onclick="LogClickCount(this,336);">大数据</a>
+<a title="aptech" href="http://www.csdn.net/tag/aptech" target="_blank" onclick="LogClickCount(this,336);">aptech</a>
+<a title="Perl" href="http://www.csdn.net/tag/perl" target="_blank" onclick="LogClickCount(this,336);">Perl</a>
+<a title="Tornado" href="http://www.csdn.net/tag/tornado" target="_blank" onclick="LogClickCount(this,336);">Tornado</a>
+<a title="Ruby" href="http://www.csdn.net/tag/ruby" target="_blank" onclick="LogClickCount(this,336);">Ruby</a>
+<a title="Hibernate" href="http://www.csdn.net/hibernate" target="_blank" onclick="LogClickCount(this,336);">Hibernate</a>
+<a title="ThinkPHP" href="http://www.csdn.net/tag/thinkphp" target="_blank" onclick="LogClickCount(this,336);">ThinkPHP</a>
+<a title="HBase" href="http://www.csdn.net/tag/hbase" target="_blank" onclick="LogClickCount(this,336);">HBase</a>
+<a title="Pure" href="http://www.csdn.net/tag/pure" target="_blank" onclick="LogClickCount(this,336);">Pure</a>
+<a title="Solr" href="http://www.csdn.net/tag/solr" target="_blank" onclick="LogClickCount(this,336);">Solr</a>
+<a title="Angular" href="http://www.csdn.net/tag/angular" target="_blank" onclick="LogClickCount(this,336);">Angular</a>
+<a title="Cloud Foundry" href="http://www.csdn.net/tag/cloudfoundry" target="_blank" onclick="LogClickCount(this,336);">Cloud Foundry</a>
+<a title="Redis" href="http://www.csdn.net/tag/redis" target="_blank" onclick="LogClickCount(this,336);">Redis</a>
+<a title="Scala" href="http://www.csdn.net/tag/scala" target="_blank" onclick="LogClickCount(this,336);">Scala</a>
+<a title="Django" href="http://www.csdn.net/tag/django" target="_blank" onclick="LogClickCount(this,336);">Django</a>
+<a title="Bootstrap" href="http://www.csdn.net/tag/bootstrap" target="_blank" onclick="LogClickCount(this,336);">Bootstrap</a>
+    </div>
+
+</div>
+  <script language="javascript" type="text/javascript">     
+      $(function(){
+              setTimeout(function(){
+                  $.get("/lishuo_OS_DS/svc/GetTagContent",function(data){
+                      $(".tag_list").html(data).show();
+                  });     
+              });
+          },500);                       
+ </script> 
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });         
+
+        },200);  
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },5000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },10000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },15000);
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }   
+
+</script>
+ <script language="javascript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/async_new.js"></script>      
+
+
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/lishuo_OS_DS" target="_blank">
+    <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/1_lishuo_os_ds.jpg" title="访问我的空间" style="max-width:90%">
+    </a>
+    <br>
+    <span><a href="http://my.csdn.net/lishuo_OS_DS" class="user_name" target="_blank">群体认同</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter" title="[发私信]" onclick="window.open(&#39;http://msg.csdn.net/letters/model?receiver=lishuo_OS_DS&#39;,&#39;_blank&#39;,&#39;height=350,width=700&#39;);_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_sixin&#39;])"></a>  
+</div>
+<div id="blog_medal">
+                <div id="bms_box">
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>70324次</span></li>
+    <li>积分：<span>1075</span> </li>    
+    <li>等级： <span style="position:relative;display:inline-block;z-index:1">
+            <img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/blog4.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：1075 </div>
+        </span>  </li>
+    <li>排名：<span>千里之外</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>41篇</span></li>
+    <li>转载：<span>6篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>11条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search" target="_blank">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字"></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog">
+        <input type="hidden" name="q" id="inputQ">
+        <input type="hidden" name="t" value="blog">
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";
+            window.location.href = url;
+        }   
+    });
+</script><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">    
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/916414" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">kernel</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256349" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Emacs</a><span>(17)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256350" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Shell</a><span>(13)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256356" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">ASM</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256689" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Git</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256352" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">C/C++</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256353" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Algorithm/Data</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256354" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Linux</a><span>(18)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1256355" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">GCC/GDB/Make</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="http://blog.csdn.net/lishuo_OS_DS/article/category/1258561" onclick="_gaq.push([&#39;_trackEvent&#39;,&#39;function&#39;, &#39;onclick&#39;, &#39;blog_articles_wenzhangfenlei&#39;]); ">Other</a><span>(0)</span>
+                </li>
+</ul>
+</div><div id="hotarticls" class="panel">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475" title="GitHub详细教程">GitHub详细教程</a><span>(25529)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8074374" title="ubuntu rc.local不能自动启动">ubuntu rc.local不能自动启动</a><span>(2306)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069281" title="Emacs org-mode">Emacs org-mode</a><span>(2271)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8074418" title="ubuntu 恢复桌面崩溃">ubuntu 恢复桌面崩溃</a><span>(2218)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8074343" title="Linux下Root权限无法读取文件探究">Linux下Root权限无法读取文件探究</a><span>(1732)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069039" title="Emacs:神的编辑器还是人的编辑器？">Emacs:神的编辑器还是人的编辑器？</a><span>(1707)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8074421" title="ubuntu下双显卡禁用独显">ubuntu下双显卡禁用独显</a><span>(1698)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355" title="Emacs下网络浏览器w3m">Emacs下网络浏览器w3m</a><span>(1680)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069125" title="手把手教你学会 Emacs 定制">手把手教你学会 Emacs 定制</a><span>(1622)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069529" title="ubuntu 安装texlive2012">ubuntu 安装texlive2012</a><span>(1270)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475" title="GitHub详细教程">GitHub详细教程</a><span>(5)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069281" title="Emacs org-mode">Emacs org-mode</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069125" title="手把手教你学会 Emacs 定制">手把手教你学会 Emacs 定制</a><span>(2)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355" title="Emacs下网络浏览器w3m">Emacs下网络浏览器w3m</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069039" title="Emacs:神的编辑器还是人的编辑器？">Emacs:神的编辑器还是人的编辑器？</a><span>(1)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069242" title="手把手教你学会 Emacs 主题配置">手把手教你学会 Emacs 主题配置</a><span>(0)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069311" title="Emacs org进阶">Emacs org进阶</a><span>(0)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078504" title="Git安装">Git安装</a><span>(0)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069370" title="Emacs irc 安装">Emacs irc 安装</a><span>(0)</span>
+</li>
+<li>
+<a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069378" title="Emacs irc 使用">Emacs irc 使用</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069281#comments">Emacs org-mode</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/lexnewgate" class="user_name">lexnewgate</a>:
+nice
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#comments">GitHub详细教程</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/TA_tan" class="user_name">JayTan_1992</a>:
+学习ing
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#comments">Emacs org-mode</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/svitter" class="user_name">svitter</a>:
+好文！
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355#comments">Emacs下网络浏览器w3m</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/jiluben" class="user_name">记录本</a>:
+请问为什么在cvs -d:pserver:anonymous@w3m.cvs.sourceforge...
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355#comments">GitHub详细教程</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/Assassin_Me" class="user_name">予怀</a>:
+配置章节不全啊，楼主
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355#comments">GitHub详细教程</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/MR_mac1" class="user_name">MR_mac1</a>:
+mark
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355#comments">GitHub详细教程</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/Jesse__Zhong" class="user_name">Jesse__Zhong</a>:
+mark
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069355#comments">GitHub详细教程</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/u010089395" class="user_name">hong_lucy</a>:
+这文章很好 怎么装载呀
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069039#comments">Emacs:神的编辑器还是人的编辑器？</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/ibiancheng" class="user_name">ibiancheng</a>:
+顶一个！
+    </p>
+    </li>
+    <li>
+   
+         <a href="http://blog.csdn.net/lishuo_os_ds/article/details/8069125#comments">手把手教你学会 Emacs 定制</a>
+    <p style="margin:0px;"><a href="http://blog.csdn.net/zh131443" class="user_name">zh131443</a>:
+不好意思，我说错了，我正在找那里少了个括号，请多包涵！
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+ </div>   
+            <div class="clear">
+            </div>
+        </div>
+
+        
+
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/cnick.js"></script>
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/newblog.min.js"></script>
+
+
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/showblogmedal.ashx"></script>
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/JavaScript1.js"></script><link rel="stylesheet" type="text/css" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/pub_footer_2014.css"><div class="pub_fo"><div id="pub_footerall" class="pub_footer_new"><dl><dt></dt> <dd class="foot_sub_menu"><a href="http://www.csdn.net/company/about.html" target="_blank">公司简介</a><span>|</span><a href="http://www.csdn.net/company/recruit.html" target="_blank">招贤纳士</a><span>|</span><a href="http://www.csdn.net/company/marketing.html" target="_blank">广告服务</a><span>|</span><a href="http://www.csdn.net/company/account.html" target="_blank">银行汇款帐号</a><span>|</span><a href="http://www.csdn.net/company/contact.html" target="_blank">联系方式</a><span>|</span><a href="http://www.csdn.net/company/statement.html" target="_blank">版权声明</a><span>|</span><a href="http://www.csdn.net/company/layer.html" target="_blank">法律顾问</a><span>|</span><a href="mailto:webmaster@csdn.net">问题报告</a><span>|</span><a target="_blank" href="http://www.csdn.net/friendlink.html">合作伙伴</a><span>|</span><a href="http://bbs.csdn.net/forums/Service" target="_blank">论坛反馈</a></dd><dd class="foot_contact"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2431299880&amp;site=qq&amp;menu=yes" target="_blank" class="qq">网站客服</a><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2251809102&amp;site=qq&amp;menu=yes" target="_blank" class="qq">杂志客服</a><a href="http://e.weibo.com/csdnsupport/profile" target="_blank" class="weibo">微博客服</a><a href="mailto:webmaster@csdn.net" class="email" title="联系邮箱">webmaster@csdn.net</a><span class="phone" title="服务热线">400-600-2320</span><span class="interval">|</span><span>北京创新乐知信息技术有限公司 版权所有</span><span class="interval">|</span><span>江苏乐知网络技术有限公司 提供商务支持</span></dd><dd class="foot_copyright"><span>京&nbsp;ICP&nbsp;证&nbsp;09002463&nbsp;号</span><span class="interval">|</span><span>Copyright © 1999-2014, CSDN.NET, All Rights Reserved&nbsp;</span><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202001032100010" target="_blank"><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/gongshang_logos.gif" alt="GongshangLogo" title=""></a></dd></dl></div></div><div id="note1" class="csdn_note" style="display:none; position:absolute; z-index:9999; width:440px">  <span class="notice_top_arrow"><span class="inner"></span></span>  <div class="box"></div></div><div class="csdn_notice_tip" style="display:none; position:absolute; z-index:9990; width:170px">  <iframe src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/saved_resource(2).html" frameborder="0" scrolling="no" style="z-index:-1;position:absolute;top:0;left:0;width:100%;height:100%;background:transparent"></iframe>  <div class="tip_text">您有<strong>0</strong>条新通知</div>  <a href="javascript:void 0" class="close2"></a></div><script id="noticeScript" type="text/javascript" btnid="header_notice_num" wrapid="note1" count="5" subcount="5" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/notify.js"></script>
+
+    <script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/login.js"></script>
+<script type="text/javascript">document.write("<img src=http://counter.csdn.net/pv.aspx?id=24 border=0 width=0 height=0>");</script><img src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/pv.aspx" border="0" width="0" height="0">
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/counter.js"></script><script type="text/javascript" charset="UTF-8" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/msg.popup.js"></script>
+<script type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ad-blog.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+    </div><input type="hidden" id="aa_g_data_ids">
+      <!--new top-->
+    
+    <script id="csdn-toolbar-id" btnid="header_notice_num" wrapid="note1" count="5" subcount="5" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/toolbar.js"></script>
+     <!--new top-->
+   
+    <link href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ask_float_block.css" type="text/css" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/wmd.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/showdown.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/prettify.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ask_float_block.js"></script>
+   
+
+  <div id="a52b5334d" style="width: 1px; height: 1px; display: none;">
+                    <script id="adJs52b5334" src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/52b5334.js"></script>
+                    <script>document.getElementById("adJs52b5334").src = "http://ads.csdn.net/js/opt/52b5334.js?t=" + Math.random();</script>
+   <div><iframe src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/skip.html" style="width: 1px; height: 1px; position: absolute; visibility: hidden;"></iframe></div></div>
+
+
+   
+ <div id="tag-suggest-pop">
+  <div class="relative">
+    <div class="close"></div>
+    <div class="content"></div>
+  </div>
+</div><link rel="stylesheet" type="text/css" media="screen" href="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/ask_float_fonts_css-6b30a53970eb5c3a2a045e3df585b475.css"><div data-mod="popu_64" class="tracking-ad" chg-blk="0"><a id="com-quick-reply" title="快速回复" style="top:334px"></a><a id="com-d-top-a" style="top: 372px; display: none;" title="返回顶部" onclick=""></a> </div><div class="pop_edit ask_second comm_ask_second"><h3>提问</h3><span class="ask_float_span">您的问题将会被发布在“<a class="ask_float_channel" href="http://ask.csdn.net/" target="_blank" style="cursor:pointer">技术问答</a>”频道</span><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" nodetype="close" class="close">×</a><div class="context"><div class="err_div"><span class="err_ico"></span><span class="err_txt">该问题已存在，请勿重复提问</span></div><div class="input_div"><input id="askInputSecond" type="text" style="font-size:14px;" placeholder="问题标题"></div><div class="cm_box"><div class="cm_dialog"></div> <div class="pop_cm cm_add_link"><input type="text" placeholder="链接内容" id="af_cm_link_txt"><input type="text" placeholder="链接地址" id="af_cm_link_url"><input type="text" placeholder="链接提示" id="af_cm_link_tit"><div class="text-right"><span class="btn btn-default btn-sm" id="add_link_btn">插入链接</span> </div> </div><div class="pop_cm cm_add_img"><div class="nav-tabs"><a class="img_tab active" href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#tab_upload">本地上传</a><a class="img_tab" href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#tab_weburl">网络图片</a></div><div class="tab_panel active" id="tab_upload"><div class="set_img"><iframe src="./GitHub详细教程 - 后山人的专栏 - 博客频道 - CSDN.NET_files/upload.html"></iframe></div></div><div class="tab_panel" id="tab_weburl"><input type="text" placeholder="图片地址" id="af_cm_img_url"><input type="text" placeholder="图片说明" id="af_cm_img_alt"><div class="text-right"><span class="btn btn-default btn-sm" id="add_img_btn">插入图片</span> </div></div> </div></div> <textarea id="editor_all" rows="8" style="display: none;"></textarea><div class="editor-toolbar"><i class="separator">|</i><a class="icon-headline" title="标题一（Ctrl+Alt+1）"></a><a class="icon-heading" title="标题二（Ctrl+Alt+2）"></a><a class="icon-bold" title="粗体（Ctrl+B）"></a><a class="icon-italic" title="斜体（Ctrl+I）"></a><i class="separator">|</i><a class="icon-quote-left" title="引用（Ctrl+’）"></a><a class="icon-code" title="插入代码片（Ctrl+,）"></a><a class="icon-list-ul" title="无序列表（Ctrl+L）"></a><a class="icon-list-ol" title="有序列表（Ctrl+Alt+L）"></a><i class="separator">|</i><a class="icon-link" title="添加链接（Ctrl+K）"></a><a class="icon-picture" title="添加图片（Ctrl+Alt+I）"></a><i class="separator">|</i><a class="icon-reply" title="撤退（Ctrl+Z）"></a><a class="icon-share-alt" title="前进（Ctrl+Shift+Z）"></a><i class="separator">|</i><a class="icon-info" href="http://ask.csdn.net/pages/markdown" target="_blank" title="markdown语法参考"></a><a class="icon-preview" title="预览"></a><i class="separator">|</i></div><div class="CodeMirror cm-s-paper CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="min-width: 33px;"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>&nbsp;<span style="display: inline-block; width: 1px; margin-right: -1px;">&nbsp;</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"></div><div class="CodeMirror-cursor" style="visibility: hidden;">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor" style="visibility: hidden;">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div><div class="editor-statusbar"><span class="lines">0</span><span class="words">0</span><span class="cursor">0:0</span></div><div class="div_tags clearfix"><div id="divSearchTags" class="tags_con"><input type="text"></div><input type="hidden" name="txtSearchTags"></div><div id="ask2_tagRecomm_div" class="drt_tagRecomm tracking-ad" data-mod="popu_73"><span class="drt_tit">推荐标签：</span></div></div><div class="success"><div class="left_area"><input id="chk_cb" type="checkbox"><span class="wyxs">我要悬赏</span><input id="cb_num" class="cb_num" readonly="true"><span class="phib_rii"><span> 币</span></span></div><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" nodetype="cancel" class="cancel">取消</a><a href="http://blog.csdn.net/lishuo_os_ds/article/details/8078475#" nodetype="ok" class="ok">发布</a></div></div><div id="common_ask_div_sc" class="searchContainer"><div class="sTitle">可能存在类似的问题：</div><div class="sFooter"><a class="sFirstNewAsk">我想提一个新问题</a></div></div></body></html>
